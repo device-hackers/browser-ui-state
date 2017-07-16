@@ -3,7 +3,7 @@ Unfortunately browsers does not provide any API to allow us to determine their U
 
 Such need exist for [SPAs](https://en.wikipedia.org/wiki/Single-page_application) (usually games or video content) which does not have long body to scroll through so that browser UI disappears. So they need some way to "expand" the browser to some kind of "full screen" to provide immersive user-experience. 
 
-There is [HTML5 Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) to solve this problem, but [it is not supported cross-browser](http://caniuse.com/#feat=fullscreen) (for example not supported in iOS or Android stock browser).
+There is [HTML5 Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) to solve this problem, but [it is not supported cross-browser](http://caniuse.com/#feat=fullscreen) (for example not supported in iOS or Android stock browser). Also not all browsers are using unprefixed version of the API, leading to creation of vendor-agnostic wrapper libraries like [Fscreen](https://github.com/rafrex/fscreen).
 
 Fortunately with the help of a bit of mathematics, spreadsheets and some gathered browser's statistics - it is possible to determine the state by calculating deviation between current viewport aspect ratio (reported by window.innerWidth and height) and static screen aspect ratio (reported by screen.width and height).
 
@@ -39,10 +39,21 @@ window.addEventListener('orientationchange', resizeHandler)
 ## Advanced
 Library also allows to access its internal calculations for whatever advanced usage:
 ```javascript
-console.log(browserUiState.screenAspectRatio.toFixed(2)) //Wider side devided to narrower side (screen.width & screen.height)
-console.log(browserUiState.viewportAspectRatio.toFixed(2)) //Same as above but for window.innerWidth & window.innerHeight
-console.log(browserUiState.delta.toFixed(2)) //Absolute delta between the 2 above
-console.log(`${browserUiState.deviation.toFixed(2)}%`) //Deviation between delta and screen aspect ratio
-console.log(`${browserUiState.collapsedThreshold}%`) //Deviation threshold for current user agent to treat state as collapsed (with address bar visible, usually initial)
-console.log(`${browserUiState.keyboardThreshold}%`) //Deviation threshold for current user agent to treat state as the one when on-screen keyboard is visible
+console.log(browserUiState.screenAspectRatio.toFixed(2))
+//Wider side devided to narrower side (screen.width & screen.height)
+  
+console.log(browserUiState.viewportAspectRatio.toFixed(2))
+//Same as above but for window.innerWidth & window.innerHeight
+  
+console.log(browserUiState.delta.toFixed(2))
+//Absolute delta between the 2 above
+  
+console.log(`${browserUiState.deviation.toFixed(2)}%`)
+//Deviation between delta and screen aspect ratio
+  
+console.log(`${browserUiState.collapsedThreshold}%`)
+//Deviation threshold for current user agent to treat state as collapsed (with address bar visible, usually initial)
+  
+console.log(`${browserUiState.keyboardThreshold}%`)
+//Deviation threshold for current user agent to treat state as the one when on-screen keyboard is visible
 ```
