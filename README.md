@@ -20,7 +20,7 @@ displaying overlay (only when needed) with message to the user e.g. "To use this
 
 This very library does not provide (and does not intended to) any out-of-the-box full screen solutions.
 
-[Live Example](http://to.be.done)
+[Live Demo](https://thebit.github.io/browser-ui-state/)
 
 ## Installation
 ```shell
