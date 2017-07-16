@@ -52,7 +52,7 @@ console.log(`${browserUiState.deviation.toFixed(2)}%`)
 //Deviation between delta and screen aspect ratio
   
 console.log(`${browserUiState.collapsedThreshold}%`)
-//Deviation threshold for current user agent to treat state as collapsed (with address bar visible, usually initial)
+//Deviation threshold for current user agent to treat state as collapsed (with address bar visible)
   
 console.log(`${browserUiState.keyboardThreshold}%`)
 //Deviation threshold for current user agent to treat state as the one when on-screen keyboard is visible
