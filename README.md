@@ -37,13 +37,15 @@ const browserUiState = new BrowserUiState()
   
 const resizeHandler = () => {
     console.log(browserUiState.orientation) //LANDSCAPE or PORTRAIT
-    console.log(browserUiState.state) //COLLAPSED or EXPANDED or KEYBOARD or other, see states.js
+    console.log(browserUiState.state) //COLLAPSED or EXPANDED or KEYBOARD or other, see states.js below
 }
   
 window.addEventListener('load', resizeHandler)
 window.addEventListener('resize', resizeHandler)
 window.addEventListener('orientationchange', resizeHandler)
 ```
+[states.js](https://github.com/TheBit/browser-ui-state/blob/master/src/browser-ui-state/state-providers/states.js)
+
 ### Detecting device orientation
 You might wonder why this library also reports orientation.
 
