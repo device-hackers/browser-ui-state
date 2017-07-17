@@ -1,6 +1,9 @@
 # Browser UI State
-[Live Demo](https://thebit.github.io/browser-ui-state/)
+[Live Demo](https://thebit.github.io/browser-ui-state/) - Open in Chrome, emulate to Nexus 5X and play with 
+different modes
+![Live Demo Preview](https://i.gyazo.com/61ad5012d8d32a0e41164c2b5a2db631.gif)
 
+## Motivation
 Unfortunately browsers does not provide any API to allow us to determine their UI state in context of 
 address or other bars visibility, on-screen keyboard presence, etc.
 
@@ -10,7 +13,7 @@ So they need some way to "expand" the browser to some kind of "full screen" to p
 
 There is [HTML5 Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) to solve 
 this problem, but [it is not supported cross-browser](http://caniuse.com/#feat=fullscreen) (for example 
-not supported in iOS or Android stock browser). Also not all browsers are using unprefixed version of the API, 
+not supported in iOS as well as on some Android stock browsers). Also not all browsers are using unprefixed version of the API, 
 leading to creation of vendor-agnostic wrapper libraries like [Fscreen](https://github.com/rafrex/fscreen).
 
 Fortunately with the help of a bit of mathematics, spreadsheets and some gathered browser's statistics - 
@@ -44,7 +47,8 @@ window.addEventListener('load', resizeHandler)
 window.addEventListener('resize', resizeHandler)
 window.addEventListener('orientationchange', resizeHandler)
 ```
-[states.js](https://github.com/TheBit/browser-ui-state/blob/master/src/browser-ui-state/state-providers/states.js)
+[states.js](https://github.com/TheBit/browser-ui-state/blob/master/src/browser-ui-state/state-providers/states.js) - 
+see all supported states
 
 ### Detecting device orientation
 You might wonder why this library also reports orientation.
