@@ -78,5 +78,5 @@ console.log(`${browserUiState.keyboardThreshold}%`)
 //Deviation threshold for current user agent to treat state as the one when on-screen keyboard is visible
 ```
 
-##Dependencies
+## Dependencies
 Only one: [Fscreen](https://github.com/rafrex/fscreen)
