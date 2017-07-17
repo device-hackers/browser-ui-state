@@ -1,4 +1,6 @@
 # Browser UI State
+[Live Demo](https://thebit.github.io/browser-ui-state/)
+
 Unfortunately browsers does not provide any API to allow us to determine their UI state in context of 
 address or other bars visibility, on-screen keyboard presence, etc.
 
@@ -19,8 +21,6 @@ This, being packaged into library, allows to build on top of it cross-browser fu
 displaying overlay (only when needed) with message to the user e.g. "To use this app please swipe up the page".
 
 This very library does not provide (and does not intended to) any out-of-the-box full screen solutions.
-
-[Live Demo](https://thebit.github.io/browser-ui-state/)
 
 ## Installation
 ```shell
@@ -77,3 +77,6 @@ console.log(`${browserUiState.collapsedThreshold}%`)
 console.log(`${browserUiState.keyboardThreshold}%`)
 //Deviation threshold for current user agent to treat state as the one when on-screen keyboard is visible
 ```
+
+##Dependencies
+Only one: [Fscreen](https://github.com/rafrex/fscreen)
