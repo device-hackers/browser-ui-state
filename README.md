@@ -1,7 +1,7 @@
 # Browser UI State
 [Live Demo](https://thebit.github.io/browser-ui-state/) - Open in Chrome, emulate to Nexus 5X and play with 
 different modes
-![Live Demo Preview](https://i.gyazo.com/61ad5012d8d32a0e41164c2b5a2db631.gif)
+![Live Demo Preview](https://i.gyazo.com/ab08ba53bceb0ee8f53e2029236e0308.gif)
 
 ## Motivation
 Unfortunately browsers does not provide any API to allow us to determine their UI state in context of 
