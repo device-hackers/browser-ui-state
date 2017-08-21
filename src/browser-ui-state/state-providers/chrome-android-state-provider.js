@@ -16,8 +16,9 @@ export default class ChromeAndroidStateProvider extends StateProvider {
 
         const deviceDetector = new DeviceDetector(userAgentObj)
 
-        //Need to provide different thresholds at least for Note Edge (N915) and maybe for S8 (G950)
         switch (deviceDetector.device) {
+            case Devices.SAMSUNG_GALAXY_TAB_3_10_1 :
+            case Devices.SAMSUNG_GALAXY_TAB_4_10_1 :
             case Devices.SAMSUNG_GALAXY_NOTE_EDGE : overrideThresholds({
                     portrait : {
                         collapsed: 7.0
@@ -26,6 +27,15 @@ export default class ChromeAndroidStateProvider extends StateProvider {
             case Devices.SAMSUNG_GALAXY_S8 : overrideThresholds(undefined, {
                     landscape : {
                         collapsed: 5.0
+                    }
+                }); break
+            case Devices.GOOGLE_PIXEL : overrideThresholds({
+                    portrait : {
+                        collapsed: 13.5
+                    }
+                }, {
+                    landscape : {
+                        collapsed: 12.0
                     }
                 }); break
         }

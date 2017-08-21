@@ -50,15 +50,15 @@ export default class StateProvider {
     }
 
     get state() {
-        const derivation = this.deviation
+        const deviation = this.deviation
 
         let state = States.EXPANDED
 
         if (fscreen.fullscreenElement) {
             state = States.HTML5_FULLSCREEN
-        } else if (derivation > this.keyboardThreshold) {
+        } else if (deviation > this.keyboardThreshold) {
             state = States.KEYBOARD
-        } else if (derivation > this.collapsedThreshold) {
+        } else if (deviation > this.collapsedThreshold) {
             state = States.COLLAPSED
         }
 
