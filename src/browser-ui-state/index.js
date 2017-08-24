@@ -6,6 +6,7 @@ import SafariIpadStateProvider from './state-providers/safari-ipad-state-provide
 import SamsungBrowserStateProvider from './state-providers/samsung-browser-state-provider'
 import DesktopStateProvider from './state-providers/desktop-state-provider'
 import UnknownStateProvider from './state-providers/unknown-state-provider'
+import UCBrowserENAndroidStateProvider from "./state-providers/ucbrowser-en-android-state-provider"
 
 class BrowserUiState {
     constructor(userAgentObj = window.navigator.userAgent, screenObj = screen, windowObj = window) {
@@ -22,6 +23,8 @@ class BrowserUiState {
                 this._provider = new SafariIpadStateProvider(screenObj, windowObj); break
             case UserAgents.SAMSUNG_BROWSER :
                 this._provider = new SamsungBrowserStateProvider(screenObj, windowObj); break
+            case UserAgents.UC_BROWSER_EN_ANDROID :
+                this._provider = new UCBrowserENAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.DESKTOP :
                 this._provider = new DesktopStateProvider(screenObj, windowObj); break
             default :
