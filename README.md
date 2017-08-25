@@ -84,3 +84,35 @@ console.log(`${browserUiState.keyboardThreshold}%`)
 
 ## Dependencies
 Only one: [Fscreen](https://github.com/rafrex/fscreen)
+
+## Matrix of supported devices and browsers
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:red">Body content 1</td>
+      <td bgcolor="blue">Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr bgcolor="#FF0000">
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+</table>
+
+-- | Chrome | Samsung Browser | Android 4 Stock | Android 5 Stock | Android 6 Stock | Safari | UC
+------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- 
+iPhone 7 | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+iPhone 6S Plus | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+iPhone 5S | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+-- | | | | | | | | 
+iPad Pro | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+iPad Air | :white_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_large_square: | :black_large_square:
+iPad Mini |
