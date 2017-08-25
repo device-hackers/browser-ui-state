@@ -93,5 +93,5 @@ iPhone 6S Plus | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark:
 iPhone 5S | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
 -- | | | | | | | | 
 iPad Pro | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
-iPad Air | ::white_large_square:: | :x: | :x: | :x: | :x: | ::white_large_square:: | :x:
+iPad Air | :white_large_square: | :x: | :x: | :x: | :x: | :white_large_square: | :x:
 iPad Mini | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
