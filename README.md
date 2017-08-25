@@ -1,3 +1,14 @@
+## Matrix of supported devices and browsers
+-- | Chrome | Samsung Browser | Android 4 Stock | Android 5 Stock | Android 6 Stock | Safari | UC
+------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- 
+iPhone 7 | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
+iPhone 6S Plus | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
+iPhone 5S | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
+-- | | | | | | | | 
+iPad Pro | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
+iPad Air | :white_medium_square: | :x: | :x: | :x: | :x: | :white_medium_square: | :x:
+iPad Mini | :white_check_mark: | :x: | :x: | :x: | :x: | :white_check_mark: | :x:
+
 # Browser UI State
 [Live Demo](https://thebit.github.io/browser-ui-state/) - Open in Chrome, emulate to Nexus 5X and play with 
 different modes
