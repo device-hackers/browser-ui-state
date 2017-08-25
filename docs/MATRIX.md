@@ -1,0 +1,10 @@
+# Matrix of supported devices and browsers
+-- | [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | [Samsung Internet Browser](https://en.wikipedia.org/wiki/Samsung_Internet_for_Android) | Android 4 Stock | Android 5 Stock | Android 6 Stock | [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) | [UC Browser](https://en.wikipedia.org/wiki/UC_Browser)
+------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- 
+[`Apple iPhone 7`](http://www.gsmarena.com/apple_iphone_7-8064.php) | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+[`Apple iPhone 6S Plus`](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php) | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+[`Apple iPhone 5S`](http://www.gsmarena.com/apple_iphone_5s-5685.php) | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+-- | | | | | | | | 
+[`Apple iPad Pro 12.9`](http://www.gsmarena.com/apple_ipad_pro_12_9-8717.php) | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
+[`Apple iPad Air 2`](http://www.gsmarena.com/apple_ipad_air_2-6742.php) | :white_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_large_square: | :black_large_square:
+[`Apple iPad Mini 4`](http://www.gsmarena.com/apple_ipad_mini_4-7561.php) | :white_check_mark: | :black_large_square: | :black_large_square: | :black_large_square: | :black_large_square: | :white_check_mark: | :black_large_square:
