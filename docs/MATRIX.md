@@ -1,4 +1,25 @@
 # Matrix of supported devices and browsers
+
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Footer content 1</td>
+    </tr>
+  </tfoot>
+</table>
+
 -- | [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | [Samsung Internet Browser](https://en.wikipedia.org/wiki/Samsung_Internet_for_Android) | Android 4 Stock | Android 5 Stock | Android 6 Stock | [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) | [UC Browser](https://en.wikipedia.org/wiki/UC_Browser)
 ------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- 
 **Apple iPhone with 5.5″ ([7 Plus](http://www.gsmarena.com/apple_iphone_7_plus-8065.php), [6(S) Plus](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php))** | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :+1: | :question: 
