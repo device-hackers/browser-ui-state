@@ -24,7 +24,7 @@ so it is unknown if lib will work correctly there
 **[Samsung Galaxy S7 Edge](http://www.gsmarena.com/samsung_galaxy_s7_edge-7945.php)** | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy S7](http://www.gsmarena.com/samsung_galaxy_s7-7821.php)** | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy S6](http://www.gsmarena.com/samsung_galaxy_s6-6849.php)** | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
-**[Samsung Galaxy S5](http://www.gsmarena.com/samsung_galaxy_s5-6033.php)** | :+1: | :+1: | :question: | _N/A_ | _N/A_ | _N/A_ | :question: | :question: | :construction: | :construction: | :construction: 
+**[Samsung Galaxy S5](http://www.gsmarena.com/samsung_galaxy_s5-6033.php)** | :+1: | :+1: | :question: | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy S4](http://www.gsmarena.com/samsung_i9500_galaxy_s4-5125.php)** | :+1: | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | :+1: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy A7 2017](http://www.gsmarena.com/samsung_galaxy_a7_(2016)-7759.php)** | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 -- | | | | | | | | | | | | 

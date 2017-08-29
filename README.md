@@ -29,6 +29,7 @@ This very library does not provide (and does not intended to) any out-of-the-box
 ```shell
 $ npm install --save ... //TBD
 ```
+Don't be afraid of caret (^) in your package.json for this dependency - [semver](http://semver.org/) will [be](https://medium.com/front-end-developers/versioning-you-re-doing-it-wrong-5522bb46431) used [correctly](https://bytearcher.com/articles/semver-explained-why-theres-a-caret-in-my-package-json/) :hand::expressionless: :one:.:zero:.:zero:.
 
 ## Usage
 The library's API intended to be called whenever browser resize or orientation change happens:
