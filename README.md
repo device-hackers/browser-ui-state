@@ -1,4 +1,5 @@
 # Browser UI State
+[![Code Climate](https://img.shields.io/codeclimate/issues/github/me-and/mdf.svg)]()
 
 [Live Demo](https://thebit.github.io/browser-ui-state/) - Open in Chrome, emulate to Nexus 5X and play with 
 different modes (look for state property with values e.g. EXPANDED, COLLAPSED, KEYBOARD, etc)
