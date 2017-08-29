@@ -1,4 +1,6 @@
 # Browser UI State
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-dev-image]][daviddm-dev-url] [![npm downloads][npm-downloads-image]][npm-downloads-url]
+
 [Live Demo](https://thebit.github.io/browser-ui-state/) - Open in Chrome, emulate to Nexus 5X and play with 
 different modes (look for state property with values e.g. EXPANDED, COLLAPSED, KEYBOARD, etc)
 ![Live Demo Preview](https://i.gyazo.com/ab08ba53bceb0ee8f53e2029236e0308.gif)
