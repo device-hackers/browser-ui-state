@@ -4,13 +4,13 @@ import DeviceDetector, {Devices} from '../device-detectors/device-detector'
 export default class ChromeAndroidStateProvider extends StateProvider {
     constructor(userAgentObj, screenObj, windowObj) {
         let thresholds = {
-            portrait : {
-                collapsed: 11.5,
-                keyboard: 30.2
-            },
             landscape : {
                 collapsed: 14.75,
                 keyboard: 49.4,
+            },
+            portrait : {
+                collapsed: 11.5,
+                keyboard: 30.2
             }
         }
 
@@ -19,30 +19,36 @@ export default class ChromeAndroidStateProvider extends StateProvider {
         switch (deviceDetector.device) {
             case Devices.SAMSUNG_GALAXY_TAB_3_10_1 :
             case Devices.SAMSUNG_GALAXY_TAB_4_10_1 :
-            case Devices.SAMSUNG_GALAXY_NOTE_EDGE : overrideThresholds({
-                    portrait : {
-                        collapsed: 7.0
-                    }
-                }); break
-            case Devices.SAMSUNG_GALAXY_S8 : overrideThresholds(undefined, {
-                    landscape : {
-                        collapsed: 5.0
-                    }
-                }); break
-            case Devices.GOOGLE_PIXEL : overrideThresholds({
-                    portrait : {
-                        collapsed: 13.5
-                    }
-                }, {
-                    landscape : {
-                        collapsed: 12.0
-                    }
-                }); break
-        }
-
-        function overrideThresholds(portraitObj = { portrait : {} }, landscapeObj = { landscape : {} }) {
-            Object.assign(thresholds.portrait, portraitObj.portrait)
-            Object.assign(thresholds.landscape, landscapeObj.landscape)
+            case Devices.SAMSUNG_GALAXY_NOTE_EDGE : thresholds = {
+                landscape : {
+                    collapsed: 11.25,
+                    keyboard: 32.5,
+                },
+                portrait : {
+                    collapsed: 5.35,
+                    keyboard: 19.4
+                }
+            }; break
+            case Devices.GOOGLE_PIXEL : thresholds = {
+                landscape : {
+                    collapsed: 7.0,
+                    keyboard: 31.9,
+                },
+                portrait : {
+                    collapsed: 14.05,
+                    keyboard: 32.5
+                }
+            }; break
+            case Devices.SAMSUNG_GALAXY_S8 : thresholds = {
+                landscape : {
+                    collapsed: 13.45,
+                    keyboard: 38.5,
+                },
+                portrait : {
+                    collapsed: 10.45,
+                    keyboard: 27.5
+                }
+            }; break
         }
 
         super(screenObj, windowObj, thresholds)
