@@ -1,5 +1,6 @@
 //ToDO Maybe to rewrite to single run approach used in Detect.js
 export const Devices = {
+    SAMSUNG_GALAXY_NOTE_5: 'SAMSUNG_GALAXY_NOTE_5',
     SAMSUNG_GALAXY_NOTE_EDGE: 'SAMSUNG_GALAXY_NOTE_EDGE',
     SAMSUNG_GALAXY_TAB_4_10_1: 'SAMSUNG_GALAXY_TAB_4_10_1',
     SAMSUNG_GALAXY_TAB_3_10_1: 'SAMSUNG_GALAXY_TAB_3_10_1',
@@ -10,6 +11,7 @@ export const Devices = {
 }
 
 const DevicesRegExp = {
+    SAMSUNG_GALAXY_NOTE_5: /(?:N920)/i,
     SAMSUNG_GALAXY_NOTE_EDGE: /(?:N915)/i,
     SAMSUNG_GALAXY_TAB_4_10_1: /(?:SM-T53)/i,
     SAMSUNG_GALAXY_TAB_3_10_1: /(?:GT-P52)/i,

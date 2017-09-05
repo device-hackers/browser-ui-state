@@ -19,14 +19,15 @@ export default class ChromeAndroidStateProvider extends StateProvider {
         switch (deviceDetector.device) {
             case Devices.SAMSUNG_GALAXY_TAB_3_10_1 :
             case Devices.SAMSUNG_GALAXY_TAB_4_10_1 :
+            case Devices.SAMSUNG_GALAXY_NOTE_5 :
             case Devices.SAMSUNG_GALAXY_NOTE_EDGE : thresholds = {
                 landscape : {
-                    collapsed: 11.25,
-                    keyboard: 32.5,
+                    collapsed: 12.15,
+                    keyboard: 33.6,
                 },
                 portrait : {
-                    collapsed: 5.35,
-                    keyboard: 19.4
+                    collapsed: 6.1,
+                    keyboard: 21.2
                 }
             }; break
             case Devices.GOOGLE_PIXEL : thresholds = {
