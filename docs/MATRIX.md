@@ -28,7 +28,7 @@ so it is unknown if lib will work correctly there
 **[Samsung Galaxy S4](http://www.gsmarena.com/samsung_i9500_galaxy_s4-5125.php)** | :+1: | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | :+1: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy A7 2017](http://www.gsmarena.com/samsung_galaxy_a7_(2016)-7759.php)** | :+1: | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 -- | | | | | | | | | | | | 
-**[Samsung Galaxy Note 5](http://www.gsmarena.com/samsung_galaxy_note5-7431.php)** | :+1: | construction | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
+**[Samsung Galaxy Note 5](http://www.gsmarena.com/samsung_galaxy_note5-7431.php)** | :+1: | :construction: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy Note 4](http://www.gsmarena.com/samsung_galaxy_note_4-6434.php)** | :+1: | :+1: | :question: | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy Note 3](http://www.gsmarena.com/samsung_galaxy_note_3-5665.php)** | :+1: | :+1: | :question: | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 
 **[Samsung Galaxy Note Edge](http://www.gsmarena.com/samsung_galaxy_note_edge-6631.php)** | :+1: | :+1: | :question: | _N/A_ | _N/A_ | _N/A_ | :question: | :construction: | :construction: | :construction: | :construction: 

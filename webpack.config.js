@@ -1,6 +1,7 @@
 const path = require('path')
 /*const HtmlWebpackPlugin = require('html-webpack-plugin')*/
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+//const webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -25,5 +26,6 @@ module.exports = {
             { from: 'index.html' },
             { from: 'src/demo' }
         ], { ignore: ['*.js'] })
+        //new webpack.optimize.ModuleConcatenationPlugin()
     ]
 }
