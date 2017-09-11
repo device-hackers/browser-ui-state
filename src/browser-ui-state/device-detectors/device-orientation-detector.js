@@ -12,7 +12,7 @@ export default class DeviceOrientationDetector {
     get orientation() {
         const orientationType = screen.orientation ? screen.orientation.type : null
         if (orientationType) {
-            if (orientationType.includes(Orientation.LANDSCAPE.toLowerCase())) {
+            if (orientationType.indexOf(Orientation.LANDSCAPE.toLowerCase()) != -1) {
                 //console.debug(`(Modern solution) DeviceOrientationDetector.orientation = ${Orientation.LANDSCAPE}`)
                 return Orientation.LANDSCAPE
             } else {
