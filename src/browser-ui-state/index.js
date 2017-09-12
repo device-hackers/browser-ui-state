@@ -23,7 +23,7 @@ class BrowserUiState {
             case UserAgents.SAFARI_IPAD :
                 this._provider = new SafariIpadStateProvider(screenObj, windowObj); break
             case UserAgents.SAMSUNG_BROWSER :
-                this._provider = new SamsungBrowserStateProvider(screenObj, windowObj); break
+                this._provider = new SamsungBrowserStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_EN_ANDROID :
                 this._provider = new UCBrowserENAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_EN_IOS :
