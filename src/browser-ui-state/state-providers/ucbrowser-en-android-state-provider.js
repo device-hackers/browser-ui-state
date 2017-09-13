@@ -9,8 +9,8 @@ export default class UCBrowserENAndroidStateProvider extends StateProvider {
                 keyboard: 25.5,
             },
             portrait : {
-                collapsed: 5.05,
-                keyboard: 18.0
+                collapsed: 6.55,
+                keyboard: 19.4
             }
         }
 
