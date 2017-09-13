@@ -9,6 +9,7 @@ import UnknownStateProvider from './state-providers/unknown-state-provider'
 import UCBrowserENAndroidStateProvider from "./state-providers/ucbrowser-en-android-state-provider"
 import UCBrowserCNAndroidStateProvider from "./state-providers/ucbrowser-cn-android-state-provider"
 import UCBrowserENiOSStateProvider from "./state-providers/ucbrowser-en-ios-state-provider"
+import DUBrowserStateProvider from "./state-providers/du-browser-state-provider"
 
 class BrowserUiState {
     constructor(userAgentObj = window.navigator.userAgent, screenObj = screen, windowObj = window) {
@@ -31,6 +32,8 @@ class BrowserUiState {
                 this._provider = new UCBrowserCNAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_EN_IOS :
                 this._provider = new UCBrowserENiOSStateProvider(userAgentObj, screenObj, windowObj); break
+            case UserAgents.DU_BROWSER :
+                this._provider = new DUBrowserStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.DESKTOP :
                 this._provider = new DesktopStateProvider(userAgentObj, screenObj, windowObj); break
             default :
