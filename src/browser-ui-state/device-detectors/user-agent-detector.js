@@ -9,6 +9,7 @@ export const UserAgents = {
     SAFARI_IPHONE: 'SAFARI_IPHONE',
     SAFARI_IPAD: 'SAFARI_IPAD',
     UC_BROWSER_EN_ANDROID: 'UC_BROWSER_EN_ANDROID',
+    UC_BROWSER_CN_ANDROID: 'UC_BROWSER_CN_ANDROID',
     UC_BROWSER_EN_IOS: 'UC_BROWSER_EN_IOS',
     DESKTOP: 'DESKTOP'
 }
@@ -19,7 +20,8 @@ const UserAgentsRegExp = {
     CHROME_IOS: /(?:iPhone|iPod|iPad).+(?:Chrome|CriOS|CrMo)/i,
     SAFARI_IPHONE: /(?:iPhone|iPod).+(?:Version\/)/i,
     SAFARI_IPAD: /(?:iPad).+(?:Version\/)/i,
-    UC_BROWSER_EN_ANDROID: /(?:Android.+en-.+(?:UCBrowser|UBrowser))/i,
+    UC_BROWSER_EN_ANDROID: /Android.+(?!zh-CN).+(?:UCBrowser|UBrowser)/i,
+    UC_BROWSER_CN_ANDROID: /Android.+(?:zh-CN).+(?:UCBrowser|UBrowser)/i,
     UC_BROWSER_EN_IOS: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser))/i,
     DESKTOP: /(?:Mozilla|Opera)(?!.+(?:Android|iPhone|iPod|iPad))/i
 }
