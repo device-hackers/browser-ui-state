@@ -1,4 +1,52 @@
 # Matrix of supported devices and browsers
+## Synopsis
+Popular browsers in Europe and America are not cluttered, e.g. there is single Chrome for Android and 
+single Chrome for iOS and both can be found on Google Play and Apple iTunes respectively.
+But popular browsers in [APAC](https://en.wikipedia.org/wiki/Asia-Pacific) is completely different story...
+
+Looks like Google Play is banned in China and browser's manufactures have to distribute their browsers directly from their 
+websites or from alternative app stores. Although Google 
+[tries](https://www.forbes.com/sites/dougyoung/2015/06/04/google-u-turns-back-to-china-with-app-store-plan/#541f566d4000) 
+to get back to China with its Google Play, it is
+[still not there](http://www.androidpolice.com/2017/02/06/no-really-this-time-a-censored-google-play-store-for-china-is-coming-at-some-point-maybe/).
+But I have no reliable info, [some says](https://www.quora.com/How-does-Google-Play-in-China-function) that free apps 
+are available there, it is also not present in [the list on wiki](https://en.wikipedia.org/wiki/Websites_blocked_in_mainland_China), 
+but then it's not clear why [uc.cn](http://uc.cn) gives direct link to .apk for Chinese version of 
+UC Browser instead of uploading it to Google Play.
+Apple iTunes [is not banned but censored](https://en.wikipedia.org/wiki/Censorship_of_the_iTunes_Store).
+
+And also there are different versions of the "same" browser (just try to search for "baidu browser" and you will see).
+
+## Measuring popularity
+Time is most valuable resource for humans, that's why we need to prioritize and focus on what matters most.
+In context of this library - high prio support should be given only to really popular browsers, but for this we need 
+to have information and figures.
+
+There are [lots of tools and companies](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers) which exposes stats 
+with [StatCounter](https://en.wikipedia.org/wiki/StatCounter) possessing the largest amount of data, but it's 
+[not so obvious](https://medium.com/samsung-internet-dev/think-you-know-the-top-web-browsers-458a0a070175) 
+as it might seem, and here are the top reasons why:
+1. At least China is a separate world (and it [almost 1/5](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
+ of the total population of our planet), they have their own ~~Google~~ [Baidu](https://en.wikipedia.org/wiki/Baidu), 
+own ~~Skype~~ [Tencent QQ](https://en.wikipedia.org/wiki/Tencent_QQ), 
+own ~~Amazon~~ [Alibaba](https://en.wikipedia.org/wiki/Alibaba_Group), 
+own ~~McAfee~~ [Qihoo 360](https://en.wikipedia.org/wiki/Qihoo_360), 
+and even own ~~Wikipedias~~ [Baike.com](https://en.wikipedia.org/wiki/Hudong) / [Baidu Baike](https://en.wikipedia.org/wiki/Baidu_Baike) - mostly
+ because all usual to us services are blocked there.
+And most probably they have their own StatCounter and I more than sure mobile browsers market share there will be pretty
+different from that [shown by StatCounter](http://gs.statcounter.com/browser-market-share/mobile/china)... 
+1. Still Chrome looks like global leader, but did anyone considered/noticed that more and more browsers are starting 
+to report user-agent strings completely exact as Chrome does? 
+Just install [QQ browser](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl&hl=en) 
+and open http://whatsmyuseragent.org/ in both browsers and try to find the difference.
+Same goes for [360 Secure Browser](https://en.wikipedia.org/wiki/360_Secure_Browser): 
+> As of 2017, the latest versions of 360 Secure Browser do not offer distinguishable user-agent string. It spoofs itself either as Google Chrome or Internet Explorer, making it difficult for developers to target or identify.
+
+So... are we still so sure about market share figures?
+
+## Scope Omission
+TBD
+
 ## Legend
 - :+1: - Browser's readings on this device is present in the spreadsheet and is either falls into default group or 
 exceptional one, and everything which goes to the spreadsheet - should also be reflected in the code if needed
