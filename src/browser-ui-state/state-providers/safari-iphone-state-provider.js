@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class SafariIphoneStateProvider extends StateProvider {
-    constructor(screenObj, windowObj) {
+    constructor(userAgentObj, screenObj, windowObj) {
         const thresholds = {
             landscape : {
                 collapsed: 6.75,

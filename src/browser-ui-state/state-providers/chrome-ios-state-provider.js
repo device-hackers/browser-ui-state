@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class ChromeiOSStateProvider extends StateProvider {
-    constructor(screenObj, windowObj) {
+    constructor(userAgentObj, screenObj, windowObj) {
         const thresholds = {
             landscape : {
                 collapsed: 9.5,

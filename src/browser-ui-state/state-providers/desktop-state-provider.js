@@ -3,7 +3,7 @@ import StateProvider from './state-provider'
 import States from './states'
 
 export default class DesktopStateProvider extends StateProvider {
-    constructor(screenObj, windowObj) {
+    constructor(userAgentObj, screenObj, windowObj) {
         const thresholds = {
             landscape : {
                 collapsed: null,

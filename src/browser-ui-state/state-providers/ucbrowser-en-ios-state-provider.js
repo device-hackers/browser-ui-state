@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class UCBrowserENiOSStateProvider extends StateProvider {
-    constructor(screenObj, windowObj) {
+    constructor(userAgentObj, screenObj, windowObj) {
         let thresholds = {
             landscape : {
                 collapsed: 30.3,

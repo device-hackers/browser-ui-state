@@ -18,11 +18,11 @@ class BrowserUiState {
             case UserAgents.CHROME_ANDROID :
                 this._provider = new ChromeAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.CHROME_IOS :
-                this._provider = new ChromeIOSStateProvider(screenObj, windowObj); break
+                this._provider = new ChromeIOSStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.SAFARI_IPHONE :
-                this._provider = new SafariIphoneStateProvider(screenObj, windowObj); break
+                this._provider = new SafariIphoneStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.SAFARI_IPAD :
-                this._provider = new SafariIpadStateProvider(screenObj, windowObj); break
+                this._provider = new SafariIpadStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.SAMSUNG_BROWSER :
                 this._provider = new SamsungBrowserStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_EN_ANDROID :
@@ -30,11 +30,11 @@ class BrowserUiState {
             case UserAgents.UC_BROWSER_CN_ANDROID :
                 this._provider = new UCBrowserCNAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_EN_IOS :
-                this._provider = new UCBrowserENiOSStateProvider(screenObj, windowObj); break
+                this._provider = new UCBrowserENiOSStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.DESKTOP :
-                this._provider = new DesktopStateProvider(screenObj, windowObj); break
+                this._provider = new DesktopStateProvider(userAgentObj, screenObj, windowObj); break
             default :
-                this._provider = new UnknownStateProvider(screenObj, windowObj)
+                this._provider = new UnknownStateProvider(userAgentObj, screenObj, windowObj)
         }
     }
 
