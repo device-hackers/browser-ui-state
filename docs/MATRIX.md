@@ -26,7 +26,7 @@ There are [lots of tools and companies](https://en.wikipedia.org/wiki/Usage_shar
 with [StatCounter](https://en.wikipedia.org/wiki/StatCounter) possessing the largest amount of data, but it's 
 [not so obvious](https://medium.com/samsung-internet-dev/think-you-know-the-top-web-browsers-458a0a070175) 
 as it might seem, and here are the top reasons why:
-1. At least China is a separate world (and it [almost 1/5](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
+1. At least China is a separate world (and it has [almost 1/5](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
  of the total population of our planet), they have their own ~~Google~~ [Baidu](https://en.wikipedia.org/wiki/Baidu), 
 own ~~Skype~~ [Tencent QQ](https://en.wikipedia.org/wiki/Tencent_QQ), 
 own ~~Amazon~~ [Alibaba](https://en.wikipedia.org/wiki/Alibaba_Group), 
@@ -45,7 +45,16 @@ Same goes for [360 Secure Browser](https://en.wikipedia.org/wiki/360_Secure_Brow
 So... are we still so sure about market share figures?
 
 ## Scope Omission
-TBD
+So let's try to list exact browsers with exact links and try to see if we have any exact figures associated with exactly
+those browsers. Google Play gives us downloads count, while Apple iTunes gives only reviews count which unfortunately
+has nothing to do with downloads, but at least can be used to compare products relatively to each other.
+
+Information is based on the Q3 2017 landscape:
+
+Group | OS | Device class | Simplified browser name | Browser name as it appears in the market | Install link | Downloads/reviews count | Support level | Comment 
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+![Chrome logo](https://www.jameshay.co.uk/img/icons/Chrome.png)&nbsp;[Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | Android | Smartphones & Tablets | [Chrome for Android](https://en.wikipedia.org/wiki/Google_Chrome_for_Android) | Google Chrome: Fast & Secure | [link](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | 1,000,000,000 - 5,000,000,000 | :chart_with_upwards_trend:&nbsp;High |
+-- | iOS | Smartphones & Tablets | Chrome for iOS | Google Chrome | [link](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | 56591 | :chart_with_downwards_trend:&nbsp;Low |
 
 ## Legend
 - :+1: - Browser's readings on this device is present in the spreadsheet and is either falls into default group or 
