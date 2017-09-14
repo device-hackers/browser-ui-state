@@ -51,10 +51,10 @@ has nothing to do with downloads, but at least can be used to compare products r
 
 Information is based on the Q3 2017 landscape:
 
-Group | OS | Device class | Simplified browser name | Browser name in the market place | Install link | Downloads/reviews count | Support level 
+Group | OS | Device class | Simplified browser name | Browser name in the market | Install link | Downloads/reviews count | Support level 
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
-![Chrome logo](https://www.jameshay.co.uk/img/icons/Chrome.png)&nbsp;[Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | Android | Smartphones & Tablets | [Chrome for Android](https://en.wikipedia.org/wiki/Google_Chrome_for_Android) | Google Chrome: Fast & Secure | [link](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | 1,000,000,000 - 5,000,000,000 | :chart_with_upwards_trend:&nbsp;High
--- | iOS | Smartphones & Tablets | Chrome for iOS | Google Chrome | [link](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | 56591 | :chart_with_downwards_trend:&nbsp;Low
+![Chrome logo](https://www.jameshay.co.uk/img/icons/Chrome.png) [Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | Android | Smartphones & Tablets | [Chrome for Android](https://en.wikipedia.org/wiki/Google_Chrome_for_Android) | Google Chrome: Fast & Secure | [link](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | 1,000,000,000 - 5,000,000,000 | :chart_with_upwards_trend:&nbsp;High
+-- | iOS | Smartphones & Tablets | Chrome for iOS | Google Chrome | [link](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | 56591 | :chart_with_upwards_trend:&nbsp;Low
 
 ## Legend
 - :+1: - Browser's readings on this device is present in the spreadsheet and is either falls into default group or 
