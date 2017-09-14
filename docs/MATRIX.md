@@ -55,8 +55,12 @@ Group | OS | Device class | Simplified browser name | Market browser name | Inst
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
 ![Chrome logo](https://www.jameshay.co.uk/img/icons/Chrome.png) [Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | Android | Smartphones & Tablets | [Chrome for Android](https://en.wikipedia.org/wiki/Google_Chrome_for_Android) | Google Chrome: Fast & Secure | [link](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | 1,000,000,000 - 5,000,000,000 | :chart_with_upwards_trend:&nbsp;High
 -- | iOS | Smartphones & Tablets | Chrome for iOS | Google Chrome | [link](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | 56591 | :chart_with_upwards_trend:&nbsp;High
+![Safari logo](https://scanword.ru/local/templates/scanword_ru/images/browsers/safari.png) [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) | iOS | Smartphones & Tablets | Safari | Safari | - | - | :chart_with_upwards_trend:&nbsp;High
 
-## Legend
+
+## Matrix
+
+### Legend
 - :+1: - Browser's readings on this device is present in the spreadsheet and is either falls into default group or 
 exceptional one, and everything which goes to the spreadsheet - should also be reflected in the code if needed
 - _N/A_ - Browser does not exist on corresponding device
@@ -64,7 +68,6 @@ exceptional one, and everything which goes to the spreadsheet - should also be r
 so it is unknown if lib will work correctly there
 - :construction: - Readings are going to be taken and support to be added to code if needed
 
-## Matrix
 -- | [Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | [Samsung Browser](https://en.wikipedia.org/wiki/Samsung_Internet_for_Android) | Android 4 Stock | Android 5 Stock | Android 6 Stock | [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) | [UC](https://en.wikipedia.org/wiki/UC_Browser) | [FF](https://en.wikipedia.org/wiki/Firefox_for_Mobile) | [Opr](https://en.wikipedia.org/wiki/Opera_Mobile) | [QQ](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl) | [DU](https://play.google.com/store/apps/details?id=com.baidu.browser.inter)
 ------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
 **Apple iPhone with 5.5″ ([7 Plus](http://www.gsmarena.com/apple_iphone_7_plus-8065.php), [6(S) Plus](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php))** | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :+1: | :question: | :construction: | :construction: | :construction: | :construction: 
