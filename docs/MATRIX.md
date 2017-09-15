@@ -79,16 +79,25 @@ Group | OS | Designed for device class | Unique browser ID | Market browser name
 &nbsp; | ![iOS](https://en.5ibc.net/img/m/ios.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `opr-mini-ios` | Opera mini web browser | [:link:](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8) | :star:&nbsp;83k+ | v16.0.2 <br> 2017-09-11 | :chart_with_upwards_trend: High
 &nbsp;  |
 ![Android Stock logo](https://www.aerocool.com.tw/images/fp-lanswitcher/images/Globe_icon.png) [Android Stock](https://en.wikipedia.org/wiki/List_of_features_in_Android#General) | ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `andr-stock` | Internet | - | - | - | :chart_with_upwards_trend:&nbsp;High
+&nbsp;  |
+![FF logo](http://www.gruppotuo.eu/Images/Browser/Firefox.png) [Firefox](https://en.wikipedia.org/wiki/Firefox) | ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `ff-for-andr` | Firefox Browser | [:link:](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en) | :floppy_disk:&nbsp;100m+ <br> :star:&nbsp;2.9m+ | v55.0.2 <br> 2017-08-16 | :chart_with_upwards_trend: High
+&nbsp; | ![iOS](https://en.5ibc.net/img/m/ios.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `ff-for-ios` | Firefox web browser | [:link:](https://itunes.apple.com/us/app/firefox-web-browser/id989804926?mt=8) | :star:&nbsp;2.8k+ | v8.3 <br> 2017-09-07 | :chart_with_upwards_trend: High
+&nbsp;  |
+[360 Secure Browser](https://en.wikipedia.org/wiki/360_Secure_Browser://en.wikipedia.org/wiki/UC_Browser) | ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `360-sec-cn-for-andr` | 360浏览器 | [:link:](http://down.360safe.com/360mse/360mse_nh00002.apk) | ? | v8.2.0.110 <br> 2017-09-07 | :chart_with_upwards_trend: High
+&nbsp; | ![iOS](https://en.5ibc.net/img/m/ios.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `360-sec-cn-for-ios` | 360手机浏览器 | [:link:](https://itunes.apple.com/gb/app/360%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8-%E5%AE%89%E5%85%A8%E4%B8%8A%E7%BD%91%E7%9C%8B%E6%96%B0%E9%97%BB-%E5%AE%89%E5%BF%83%E6%90%9C%E7%B4%A2-%E6%9E%81%E9%80%9F%E6%8A%A2%E7%A5%A8/id892311054?mt=8) | :star: 0 | v4.0.4 <br> 2017-05-019 | :chart_with_upwards_trend: Low
 
 ### Decisions:
 - In China [there is no single marketplace](http://technode.com/2017/06/02/top-10-android-app-stores-china-2017/) for apps, so we should rely on browser manufacturer's official websites.
 - Beta versions are not supported for obvious reasons
 - Browsers which are not present anymore on marketplaces and was updated years ago even if there are direct links from 
-manufacturer's sites to them (e.g. uc-hd-en-for-andr) - are not supported; let's face it - Web is evolving very quickly 
+manufacturer's sites to them (e.g. `uc-hd-en-for-andr`) - are not supported; let's face it - Web is evolving very quickly 
 so such browsers will be left behind anyway...
-- Mini versions of browsers (Opera Mini, UC Mini, etc) are not compatible/relevant (except Opera mini iOS) by their 
+- Mini versions of browsers (`opr-mini-andr`, `uc-mini-for-andr`, etc) are not compatible/relevant (except `opr-mini-ios`) by their 
 nature with functionality covered by this library (any dynamic behaviour on the page even simplest checkboxes and 
 buttons - will trigger request to manufacturer's serving server and subsequent page reload)
+- `360-sec-cn-for-ios` even though looks healthy (links from manufacturer's website point to iTunes and it actually 
+available there + releases are recent), but it has 0 ratings, so it means no one uses it - that's why level of 
+support is Low (actually the same as with `uc-hd-cn-for-ios`)
 
 ## Matrix
 
