@@ -44,7 +44,7 @@ Same goes for [360 Secure Browser](https://en.wikipedia.org/wiki/360_Secure_Brow
 
 So... are we still so sure about market share figures?
 
-## Scope Omission
+## Scope omission
 So let's try to list exact browsers with exact links and try to see if we have any exact figures associated with exactly
 those browsers. Google Play gives us downloads count, while Apple iTunes gives only reviews count which unfortunately
 has nothing to do with downloads, but at least can be used to compare products relatively to each other.
@@ -96,9 +96,10 @@ Group | OS | Designed for device class | Unique browser ID | Market browser name
 &nbsp; | ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) | ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `du-mini-en-for-andr` | DU Browser Mini | [:link:](https://play.google.com/store/apps/details?id=com.baidu.browser.inter.mini) | :floppy_disk:&nbsp;1m+ <br> :star:&nbsp;19k+ | v1.12.23 <br> 2016-12-23 | :chart_with_upwards_trend: High
 &nbsp; | ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) | ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png) | `du-hd-en-for-andr` | DU Browser for Tablet | [:link:](https://play.google.com/store/apps/details?id=com.baidu.browserhd.inter) | :floppy_disk:&nbsp;1m+ <br> :star:&nbsp;76k+ | v1.9.0.2 <br> 2015-04-09 | :chart_with_upwards_trend: High
 
-### Decisions:
-- In China [there is no single marketplace](http://technode.com/2017/06/02/top-10-android-app-stores-china-2017/) 
+In China [there is no single marketplace](http://technode.com/2017/06/02/top-10-android-app-stores-china-2017/) 
 for apps, so we should rely on browser manufacturer's official websites.
+
+### Support level decisions:
 - Beta versions are not supported for obvious reasons
 - Browsers which are not present anymore on marketplaces and was updated years ago even if there are direct links from 
 manufacturer's sites to them (e.g. `uc-hd-en-for-andr`) - are not supported; let's face it - Web is evolving very quickly 
