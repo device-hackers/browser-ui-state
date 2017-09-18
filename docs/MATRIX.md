@@ -1,10 +1,11 @@
-- [Matrix of supported devices and browsers](#)
-	- [Synopsis](#)
-	- [Measuring popularity](#)
-	- [Scope omission](#)
-		- [Support level decisions:](#)
-	- [Matrix](#)
-		- [Legend](#)
+- [Browser UI State](#browser-ui-state)
+  - [Motivation](#motivation)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Detecting device orientation](#detecting-device-orientation)
+  - [Advanced](#advanced)
+  - [Dependencies](#dependencies)
+  - [Matrix of supported devices and browsers](#matrix-of-supported-devices-and-browsers)
 
 # Matrix of supported devices and browsers
 ## Synopsis
