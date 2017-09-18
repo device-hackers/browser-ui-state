@@ -1,11 +1,3 @@
-- [Matrix of supported devices and browsers](#)
-	- [Synopsis](#)
-	- [Measuring popularity](#)
-	- [Scope omission](#scope-omission)
-		- [Support level decisions:](#)
-	- [Matrix](#)
-		- [Legend](#)
-
 # Matrix of supported devices and browsers
 ## Synopsis
 Popular browsers in Europe and America are not cluttered, e.g. there is single Chrome for Android and 
@@ -111,7 +103,7 @@ Group | OS | Designed for device class | Unique browser ID | Market browser name
 In China [there is no single marketplace](http://technode.com/2017/06/02/top-10-android-app-stores-china-2017/) 
 for apps, so we should rely on browser manufacturer's official websites.
 
-### Support level decisions:
+### Support level decisions
 - Beta versions are not supported for obvious reasons
 - Browsers which are not present anymore on marketplaces and was updated years ago even if there are direct links from 
 manufacturer's sites to them (e.g. `uc-hd-en-for-andr`) - are not supported; let's face it - Web is evolving very quickly 
