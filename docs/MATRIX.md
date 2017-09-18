@@ -4,6 +4,7 @@
   - [Synopsis](#synopsis)
   - [Measuring popularity](#measuring-popularity)
   - [Scope omission](#scope-omission)
+    - [Concise list of links to High level support browsers](#concise-list-of-links-to-high-level-support-browsers)
     - [Support level decisions](#support-level-decisions)
   - [Matrix](#matrix)
     - [Legend](#legend)
@@ -113,6 +114,12 @@ Group | OS | Designed for device class | Unique browser ID | Market browser name
 
 In China [there is no single marketplace](http://technode.com/2017/06/02/top-10-android-app-stores-china-2017/) 
 for apps, so we should rely on browser manufacturer's official websites.
+
+### Concise list of links to High level support browsers
+- ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png): [`chr-for-andr`](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en), [`uc-en-for-andr`](https://play.google.com/store/apps/details?id=com.UCMobile.intl), [`uc-cn-on-uc.cn`](http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/145/999/web_banner), [`sam-bro-andr`](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en), [`opr-andr`](https://play.google.com/store/apps/details?id=com.opera.browser&hl=en), `andr-stock`, [`ff-for-andr`](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en), [`360-sec-cn-for-andr`](http://down.360safe.com/360mse/360mse_nh00002.apk), [`qq-en-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl&hl=en), [`qq-cn-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt), [`du-en-for-andr`](https://play.google.com/store/apps/details?id=com.baidu.browser.inter&hl=en)
+- ![Android](https://widgets.future-hawk-content.co.uk/img/specs/android.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png): [`chr-for-andr`](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en), [`uc-en-for-andr`](https://play.google.com/store/apps/details?id=com.UCMobile.intl), [`uc-cn-on-uc.cn`](http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/145/999/web_banner), [`sam-bro-andr`](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en), [`opr-andr`](https://play.google.com/store/apps/details?id=com.opera.browser&hl=en), `andr-stock`, [`ff-for-andr`](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en), [`360-sec-cn-for-andr`](http://down.360safe.com/360mse/360mse_nh00002.apk), [`qq-en-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl&hl=en), [`qq-cn-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt), [`du-en-for-andr`](https://play.google.com/store/apps/details?id=com.baidu.browser.inter&hl=en), [`du-hd-en-for-andr`](https://play.google.com/store/apps/details?id=com.baidu.browserhd.inter)
+- ![iOS](https://en.5ibc.net/img/m/ios.png) ![smartphone](http://icons.iconarchive.com/icons/musett/iphone-4/24/iPhone-Black-W2-icon.png): [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8), `safari`, [`uc-en-for-ios`](https://itunes.apple.com/us/app/uc-browser-fast-browsing-powerful-ad-block/id1048518592), [`uc-cn-for-ios`](https://itunes.apple.com/cn/app/uc-liu-lan-qi-ji-su-yu-le/id586871187?mt=8), [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8), [`qq-cn-for-ios`](https://itunes.apple.com/us/app/qq%E6%B5%8F%E8%A7%88%E5%99%A8/id370139302?mt=8)
+- ![iOS](https://en.5ibc.net/img/m/ios.png) ![tablet](http://icons.iconarchive.com/icons/adidadidu/ipad/24/iPad-Landscape-Space-Background-icon.png): [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8), `safari`, [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8)
 
 ### Support level decisions
 - Beta versions are not supported for obvious reasons
