@@ -1,3 +1,11 @@
+- [Matrix of supported devices and browsers](#)
+	- [Synopsis](#)
+	- [Measuring popularity](#)
+	- [Scope omission](#)
+		- [Support level decisions:](#)
+	- [Matrix](#)
+		- [Legend](#)
+
 # Matrix of supported devices and browsers
 ## Synopsis
 Popular browsers in Europe and America are not cluttered, e.g. there is single Chrome for Android and 
