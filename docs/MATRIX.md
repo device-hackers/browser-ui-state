@@ -146,11 +146,11 @@ exceptional one, and everything which goes to the spreadsheet - should also be r
 so it is unknown if lib will work correctly there
 - :construction: - Readings are going to be taken and support to be added to code if needed
 
-
+<!--
 &nbsp; | [`chr-for-andr`](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | [`uc-en-for-andr`](https://play.google.com/store/apps/details?id=com.UCMobile.intl) | [`uc-cn-on-uc.cn`](http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/145/999/web_banner) | [`sam-bro-andr`](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en) | [`opr-andr`](https://play.google.com/store/apps/details?id=com.opera.browser&hl=en) | `andr-stock` | [`ff-for-andr`](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en) | [`360-sec-cn-for-andr`](http://down.360safe.com/360mse/360mse_nh00002.apk) | [`qq-en-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl&hl=en) | [`qq-cn-for-andr`](https://play.google.com/store/apps/details?id=com.tencent.mtt) | [`du-en-for-andr`](https://play.google.com/store/apps/details?id=com.baidu.browser.inter&hl=en) | [`du-hd-en-for-andr`](https://play.google.com/store/apps/details?id=com.baidu.browserhd.inter)
 ------------ | ------------- | -------------- | ------------- | -------------- | ------------- | -------------- | ------------- | ------------- | ------------- | ------------- | -------------  | ------------- 
 **Apple iPhone with 5.5″ ([7 Plus](http://www.gsmarena.com/apple_iphone_7_plus-8065.php), [6(S) Plus](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php))** | :+1: | _N/A_ | _N/A_ | _N/A_ | _N/A_ | :+1: | :question: | :construction: | :construction: | :construction: | :construction: 
-
+-->
 
 
 &nbsp; | [Chrome](https://en.wikipedia.org/wiki/Google_Chrome) | [Samsung Browser](https://en.wikipedia.org/wiki/Samsung_Internet_for_Android) | Android 4 Stock | Android 5 Stock | Android 6 Stock | [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) | [UC](https://en.wikipedia.org/wiki/UC_Browser) | [FF](https://en.wikipedia.org/wiki/Firefox_for_Mobile) | [Opr](https://en.wikipedia.org/wiki/Opera_Mobile) | [QQ](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl) | [DU](https://play.google.com/store/apps/details?id=com.baidu.browser.inter)
