@@ -134,6 +134,7 @@ available there + releases are recent), but it has 0 ratings, so it means no one
 support is Low (actually the same as with `uc-hd-cn-for-ios`)
 - Low level or unsupported level get most of iPad specific browsers (e.g. `ff-for-ios`, `qq-cn-hd-for-ios`) - even 3k 
 of ratings are very low level of popularity comparing to others
+- Browsers which are available only via direct links from web sites - have to get High level of support due to absence of download count information
 
 ## Matrix
 
