@@ -192,10 +192,10 @@ in the spreadsheet, so it is unknown if lib will work correctly there
 **[Samsung Galaxy Note 3](http://www.gsmarena.com/samsung_galaxy_note_3-5665.php)** | :+1: | :question: | :question: | :+1: | :construction: | :question: | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
 **[Samsung Galaxy Note Edge](http://www.gsmarena.com/samsung_galaxy_note_edge-6631.php)** | :+1: | :question: | :question: | :+1: | :construction: | :question: | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
 &nbsp; |
-**[Google Pixel](http://www.gsmarena.com/google_pixel-8346.php)** | :+1: | :question: | :question: | :+1: | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
-**[Google Pixel XL](http://www.gsmarena.com/google_pixel_xl-8345.php)** | :+1: | :question: | :question: | :+1: | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
-**[Google Nexus 5X](http://www.gsmarena.com/lg_nexus_5x-7556.php)** | :+1: | :question: | :question: | :+1: | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
-**[Google Nexus 6P](http://www.gsmarena.com/huawei_nexus_6p-7588.php)** | :+1: | :question: | :question: | :+1: | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
+**[Google Pixel](http://www.gsmarena.com/google_pixel-8346.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
+**[Google Pixel XL](http://www.gsmarena.com/google_pixel_xl-8345.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
+**[Google Nexus 5X](http://www.gsmarena.com/lg_nexus_5x-7556.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
+**[Google Nexus 6P](http://www.gsmarena.com/huawei_nexus_6p-7588.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
 &nbsp; |
 **[LG G6](http://www.gsmarena.com/lg_g6-8466.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
 **[LG G5](http://www.gsmarena.com/lg_g5-7815.php)** | :+1: | :question: | :question: | _N/A_ | :construction: | _N/A_ | :construction: | :construction: | :construction: | :construction: | :construction: | :construction:
