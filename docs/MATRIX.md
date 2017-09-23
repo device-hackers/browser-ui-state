@@ -8,6 +8,10 @@
     - [Support level decisions](#support-level-decisions)
   - [Matrix](#matrix)
     - [Legend](#legend)
+    - [iOS Tablets](#ios-tablets)
+    - [iOS Smartphones](#ios-smartphones)
+    - [Android Tablets](#android-tablets)
+    - [Android Smartphones](#android-smartphones)
 
 
 # Matrix of supported devices and browsers
