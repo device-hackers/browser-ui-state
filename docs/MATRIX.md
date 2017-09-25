@@ -129,6 +129,12 @@ for apps, so we should rely on browser manufacturer's official websites.
 - ![iOS](assets/logos/Apple.png) ![tablet](assets/logos/Tablet.png): [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8), `safari`, [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8)
 
 ### Support level decisions
+- :chart_with_upwards_trend:&nbsp;High - means this library will aim to support this browser in the first place
+- :chart_with_downwards_trend:&nbsp;Low - means the browser may be supported in the second place 
+(if all High browsers are supported)
+- :x: Not supported - no sense to support (e.g. browser has 0 rating in iTunes and/or last updated version is years ago) 
+or technically impossible (e.g. browser was removed from marketplace and may still exist on some devices if it was 
+installed previously)
 - Beta versions are not supported for obvious reasons
 - Browsers which are not present anymore on marketplaces and was updated years ago even if there are direct links from 
 manufacturer's sites to them (e.g. `uc-hd-en-for-and`) - are not supported; let's face it - Web is evolving very quickly 
@@ -141,7 +147,8 @@ available there + releases are recent), but it has 0 ratings, so it means no one
 support is Low (actually the same as with `uc-hd-cn-for-ios`)
 - Low level or unsupported level get most of iPad specific browsers (e.g. `ff-for-ios`, `qq-cn-hd-for-ios`) - even 3k 
 of ratings are very low level of popularity comparing to others
-- Browsers which are available only via direct links from web sites - have to get High level of support due to absence of download count information
+- Browsers which are available only via direct links from web sites - have to get High level of support due to 
+absence of download count information
 
 ## Matrix
 
