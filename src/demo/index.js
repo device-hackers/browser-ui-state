@@ -8,7 +8,7 @@ class BrowserUiStateDemo {
 
         window.addEventListener('load', () => {
             this.updateUi()
-            this._generateMailToLink()
+            //this._generateMailToLink()
 
             document.getElementById('html5FullscreenBtn').addEventListener('click', event => fscreen.fullscreenElement ?
                 fscreen.exitFullscreen() : fscreen.requestFullscreen(document.documentElement))
