@@ -13,6 +13,6 @@ export default class SafariIphoneStateProvider extends StateProvider {
             }
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(screenObj, windowObj, thresholds, userAgentObj)
     }
 }
