@@ -2,7 +2,7 @@ import fscreen from 'fscreen'
 import StateProvider from './state-provider'
 import States from './states'
 
-export default class DUBrowserStateProvider extends StateProvider {
+export default class StaticStateProvider extends StateProvider {
     constructor(userAgentObj, screenObj, windowObj) {
         const thresholds = {
             landscape : {

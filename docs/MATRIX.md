@@ -129,6 +129,12 @@ for apps, so we should rely on browser manufacturer's official websites.
 - ![iOS](assets/logos/Apple.png) ![tablet](assets/logos/Tablet.png): [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8), `safari`, [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8)
 
 ### Support level decisions
+- :chart_with_upwards_trend:&nbsp;High - means this library will aim to support this browser in the first place
+- :chart_with_downwards_trend:&nbsp;Low - means the browser may be supported in the second place 
+(if all High browsers are supported)
+- :x: Not supported - no sense to support (e.g. browser has 0 rating in iTunes and/or last updated version is years ago) 
+or technically impossible (e.g. browser was removed from marketplace and may still exist on some devices if it was 
+installed previously)
 - Beta versions are not supported for obvious reasons
 - Browsers which are not present anymore on marketplaces and was updated years ago even if there are direct links from 
 manufacturer's sites to them (e.g. `uc-hd-en-for-and`) - are not supported; let's face it - Web is evolving very quickly 
@@ -141,7 +147,8 @@ available there + releases are recent), but it has 0 ratings, so it means no one
 support is Low (actually the same as with `uc-hd-cn-for-ios`)
 - Low level or unsupported level get most of iPad specific browsers (e.g. `ff-for-ios`, `qq-cn-hd-for-ios`) - even 3k 
 of ratings are very low level of popularity comparing to others
-- Browsers which are available only via direct links from web sites - have to get High level of support due to absence of download count information
+- Browsers which are available only via direct links from web sites - have to get High level of support due to 
+absence of download count information
 
 ## Matrix
 
@@ -156,10 +163,10 @@ in the spreadsheet, so it is unknown if lib will work correctly there
 ### iOS Tablets
 &nbsp; | [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | `safari` | [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8)
 ------------ | ------------- | -------------- | -------------- 
-**iPad with 12.9″<br>([Pro 12.9](http://www.gsmarena.com/apple_ipad_pro_12_9-8717.php))** | :+1: | :+1: | :construction:
-**iPad with 10.5″<br>([Pro 10.5](http://www.gsmarena.com/apple_ipad_pro_10_5-8716.php))** | :+1: | :+1: | :construction:
-**iPad with 9.7″<br>([5-th gen](http://www.gsmarena.com/apple_ipad_9_7-8620.php) - [1-st gen](http://www.gsmarena.com/apple_ipad_wi_fi-3828.php),<br>[Pro 9.7](http://www.gsmarena.com/apple_ipad_pro_9_7-7984.php), [Air 2](http://www.gsmarena.com/apple_ipad_air_2-6742.php) - [Air](http://www.gsmarena.com/apple_ipad_air-5797.php))** | :+1: | :+1: | :construction:
-**iPad with 7.9″<br>([Mini 4](http://www.gsmarena.com/apple_ipad_mini_4-7561.php) - [Mini](http://www.gsmarena.com/apple_ipad_mini_wi_fi_+_cellular-5061.php))** | :+1: | :+1: | :construction:
+**iPad with 12.9″<br>([Pro 12.9](http://www.gsmarena.com/apple_ipad_pro_12_9-8717.php))** | :+1: | :+1: | :+1:
+**iPad with 10.5″<br>([Pro 10.5](http://www.gsmarena.com/apple_ipad_pro_10_5-8716.php))** | :+1: | :+1: | :+1:
+**iPad with 9.7″<br>([5-th gen](http://www.gsmarena.com/apple_ipad_9_7-8620.php) - [1-st gen](http://www.gsmarena.com/apple_ipad_wi_fi-3828.php),<br>[Pro 9.7](http://www.gsmarena.com/apple_ipad_pro_9_7-7984.php), [Air 2](http://www.gsmarena.com/apple_ipad_air_2-6742.php) - [Air](http://www.gsmarena.com/apple_ipad_air-5797.php))** | :+1: | :+1: | :+1:
+**iPad with 7.9″<br>([Mini 4](http://www.gsmarena.com/apple_ipad_mini_4-7561.php) - [Mini](http://www.gsmarena.com/apple_ipad_mini_wi_fi_+_cellular-5061.php))** | :+1: | :+1: | :+1:
 
 ### iOS Smartphones
 &nbsp; | [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | `safari` | [`uc-en-for-ios`](https://itunes.apple.com/us/app/uc-browser-fast-browsing-powerful-ad-block/id1048518592) | [`uc-cn-for-ios`](https://itunes.apple.com/cn/app/uc-liu-lan-qi-ji-su-yu-le/id586871187?mt=8) | [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8) | [`qq-cn-for-ios`](https://itunes.apple.com/us/app/qq%E6%B5%8F%E8%A7%88%E5%99%A8/id370139302?mt=8)
@@ -168,7 +175,8 @@ in the spreadsheet, so it is unknown if lib will work correctly there
 **iPhone&nbsp;with&nbsp;5.5″<br>([8 Plus](http://www.gsmarena.com/apple_iphone_8_plus-8131.php), [7 Plus](http://www.gsmarena.com/apple_iphone_7_plus-8065.php), [6(S) Plus](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php))** | :+1: | :+1: | :+1: | :construction: | :construction: | :construction:
 **iPhone&nbsp;with&nbsp;4.7″<br>([8](http://www.gsmarena.com/apple_iphone_8-8573.php), [7](http://www.gsmarena.com/apple_iphone_7-8064.php), [6(S)](http://www.gsmarena.com/apple_iphone_6s-7242.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
 **iPhone&nbsp;with&nbsp;4.0″<br>([5(S/SE/C)](http://www.gsmarena.com/apple_iphone_5s-5685.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
-**iPhone&nbsp;with&nbsp;3.5″<br>([4(S)](http://www.gsmarena.com/apple_iphone_4s-4212.php), [3G(S)](http://www.gsmarena.com/apple_iphone_3gs-2826.php) - [1st gen](http://www.gsmarena.com/apple_iphone-1827.php))** | :question: | :question: | :question: | :construction: | :construction: | :construction:
+**iPhone&nbsp;with&nbsp;3.5″<br>([4(S)](http://www.gsmarena.com/apple_iphone_4s-4212.php), [3G(S)](http://www.gsmarena.com/apple_iphone_3gs-2826.php) - [1st gen](http://www.gsmarena.com/apple_iphone-1827.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
+* *iPhone X, iPhone 8, iPhone 8 Plus - are checked in Xcode simulator with Safari only*
 
 ### Android Tablets
 &nbsp; | [`chr-for-and`](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en) | [`uc-en-for-and`](https://play.google.com/store/apps/details?id=com.UCMobile.intl) | [`uc-cn-for-and`](http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/145/999/web_banner) | [`sam-bro-and`](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en) | [`opr-and`](https://play.google.com/store/apps/details?id=com.opera.browser&hl=en) | `and-stk` | [`ff-for-and`](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en) | [`360-sec-cn-for-and`](http://down.360safe.com/360mse/360mse_nh00002.apk) | [`qq-en-for-and`](https://play.google.com/store/apps/details?id=com.tencent.mtt.intl&hl=en) | [`qq-cn-for-and`](https://play.google.com/store/apps/details?id=com.tencent.mtt) | [`du-en-for-and`](https://play.google.com/store/apps/details?id=com.baidu.browser.inter&hl=en) | [`du-cn-for-and`](http://downapp.baidu.com/baidubrowser/AndroidPhone/7.15.13.0/1/1200a/20170911110823/baidubrowser_AndroidPhone_7-15-13-0_1200a.apk?responseContentDisposition=attachment%3Bfilename%3D%22baidubrowser_AndroidPhone_1200a.apk%22&responseContentType=application%2Fvnd.android.package-archive&request_id=1505801731_1694181580&type=static) | [`du-hd-en-for-and`](https://play.google.com/store/apps/details?id=com.baidu.browserhd.inter)

@@ -5,11 +5,11 @@ export default class SafariIphoneStateProvider extends StateProvider {
         const thresholds = {
             landscape : {
                 collapsed: 6.75,
-                keyboard: 47.6,
+                keyboard: 48.0,
             },
             portrait : {
-                collapsed: 11.8,
-                keyboard: 29.1
+                collapsed: 12.5,
+                keyboard: 32.7
             }
         }
 
