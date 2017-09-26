@@ -12,6 +12,7 @@ export const UserAgents = {
     UC_BROWSER_CN_ANDROID: 'UC_BROWSER_CN_ANDROID',
     UC_BROWSER_EN_IOS: 'UC_BROWSER_EN_IOS',
     DU_BROWSER: 'DU_BROWSER', //Also DU HD browser falls here as there is no reliable way to separate them
+    OPERA_MINI_IPAD: 'OPERA_MINI_IPAD',
     DESKTOP: 'DESKTOP'
 }
 
@@ -25,6 +26,7 @@ const UserAgentsRegExp = {
     UC_BROWSER_CN_ANDROID: /Android.+(?:zh-CN).+(?:UCBrowser|UBrowser)/i,
     UC_BROWSER_EN_IOS: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser))/i,
     DU_BROWSER: /bdbrowser/i,
+    OPERA_MINI_IPAD: /.+iPad(?!.+Safari)/i,
     DESKTOP: /(?:Mozilla|Opera)(?!.+(?:Android|iPhone|iPod|iPad))/i
 }
 

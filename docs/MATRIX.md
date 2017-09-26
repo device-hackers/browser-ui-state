@@ -163,10 +163,10 @@ in the spreadsheet, so it is unknown if lib will work correctly there
 ### iOS Tablets
 &nbsp; | [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | `safari` | [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8)
 ------------ | ------------- | -------------- | -------------- 
-**iPad with 12.9″<br>([Pro 12.9](http://www.gsmarena.com/apple_ipad_pro_12_9-8717.php))** | :+1: | :+1: | :construction:
-**iPad with 10.5″<br>([Pro 10.5](http://www.gsmarena.com/apple_ipad_pro_10_5-8716.php))** | :+1: | :+1: | :construction:
-**iPad with 9.7″<br>([5-th gen](http://www.gsmarena.com/apple_ipad_9_7-8620.php) - [1-st gen](http://www.gsmarena.com/apple_ipad_wi_fi-3828.php),<br>[Pro 9.7](http://www.gsmarena.com/apple_ipad_pro_9_7-7984.php), [Air 2](http://www.gsmarena.com/apple_ipad_air_2-6742.php) - [Air](http://www.gsmarena.com/apple_ipad_air-5797.php))** | :+1: | :+1: | :construction:
-**iPad with 7.9″<br>([Mini 4](http://www.gsmarena.com/apple_ipad_mini_4-7561.php) - [Mini](http://www.gsmarena.com/apple_ipad_mini_wi_fi_+_cellular-5061.php))** | :+1: | :+1: | :construction:
+**iPad with 12.9″<br>([Pro 12.9](http://www.gsmarena.com/apple_ipad_pro_12_9-8717.php))** | :+1: | :+1: | :+1:
+**iPad with 10.5″<br>([Pro 10.5](http://www.gsmarena.com/apple_ipad_pro_10_5-8716.php))** | :+1: | :+1: | :+1:
+**iPad with 9.7″<br>([5-th gen](http://www.gsmarena.com/apple_ipad_9_7-8620.php) - [1-st gen](http://www.gsmarena.com/apple_ipad_wi_fi-3828.php),<br>[Pro 9.7](http://www.gsmarena.com/apple_ipad_pro_9_7-7984.php), [Air 2](http://www.gsmarena.com/apple_ipad_air_2-6742.php) - [Air](http://www.gsmarena.com/apple_ipad_air-5797.php))** | :+1: | :+1: | :+1:
+**iPad with 7.9″<br>([Mini 4](http://www.gsmarena.com/apple_ipad_mini_4-7561.php) - [Mini](http://www.gsmarena.com/apple_ipad_mini_wi_fi_+_cellular-5061.php))** | :+1: | :+1: | :+1:
 
 ### iOS Smartphones
 &nbsp; | [`chr-for-ios`](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8) | `safari` | [`uc-en-for-ios`](https://itunes.apple.com/us/app/uc-browser-fast-browsing-powerful-ad-block/id1048518592) | [`uc-cn-for-ios`](https://itunes.apple.com/cn/app/uc-liu-lan-qi-ji-su-yu-le/id586871187?mt=8) | [`opr-mini-ios`](https://itunes.apple.com/us/app/opera-mini-web-browser/id363729560?mt=8) | [`qq-cn-for-ios`](https://itunes.apple.com/us/app/qq%E6%B5%8F%E8%A7%88%E5%99%A8/id370139302?mt=8)
