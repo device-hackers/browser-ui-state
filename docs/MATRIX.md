@@ -175,7 +175,7 @@ in the spreadsheet, so it is unknown if lib will work correctly there
 **iPhone&nbsp;with&nbsp;5.5″<br>([8 Plus](http://www.gsmarena.com/apple_iphone_8_plus-8131.php), [7 Plus](http://www.gsmarena.com/apple_iphone_7_plus-8065.php), [6(S) Plus](http://www.gsmarena.com/apple_iphone_6s_plus-7243.php))** | :+1: | :+1: | :+1: | :construction: | :construction: | :construction:
 **iPhone&nbsp;with&nbsp;4.7″<br>([8](http://www.gsmarena.com/apple_iphone_8-8573.php), [7](http://www.gsmarena.com/apple_iphone_7-8064.php), [6(S)](http://www.gsmarena.com/apple_iphone_6s-7242.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
 **iPhone&nbsp;with&nbsp;4.0″<br>([5(S/SE/C)](http://www.gsmarena.com/apple_iphone_5s-5685.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
-**iPhone&nbsp;with&nbsp;3.5″<br>([4(S)](http://www.gsmarena.com/apple_iphone_4s-4212.php), [3G(S)](http://www.gsmarena.com/apple_iphone_3gs-2826.php) - [1st gen](http://www.gsmarena.com/apple_iphone-1827.php))** | :+1: | :question: | :question: | :construction: | :construction: | :construction:
+**iPhone&nbsp;with&nbsp;3.5″<br>([4(S)](http://www.gsmarena.com/apple_iphone_4s-4212.php), [3G(S)](http://www.gsmarena.com/apple_iphone_3gs-2826.php) - [1st gen](http://www.gsmarena.com/apple_iphone-1827.php))** | :+1: | :+1: | :question: | :construction: | :construction: | :construction:
 * *iPhone X, iPhone 8, iPhone 8 Plus - are checked in Xcode simulator with Safari only*
 
 ### Android Tablets
