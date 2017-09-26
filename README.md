@@ -90,3 +90,6 @@ Only one: [Fscreen](https://github.com/rafrex/fscreen)
 
 ## Matrix of supported devices and browsers
 See [Matrix](docs/MATRIX.md)
+
+## Engine explanation
+See [Engine](docs/ENGINE.md)
