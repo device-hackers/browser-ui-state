@@ -8,7 +8,7 @@ export default class SafariIphoneStateProvider extends StateProvider {
                 keyboard: 48.0,
             },
             portrait : {
-                collapsed: 12.5,
+                collapsed: 12.0,
                 keyboard: 32.7
             }
         }
