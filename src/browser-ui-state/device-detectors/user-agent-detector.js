@@ -10,7 +10,8 @@ export const UserAgents = {
     SAFARI_IPAD: 'SAFARI_IPAD',
     UC_BROWSER_EN_ANDROID: 'UC_BROWSER_EN_ANDROID',
     UC_BROWSER_CN_ANDROID: 'UC_BROWSER_CN_ANDROID',
-    UC_BROWSER_EN_IOS: 'UC_BROWSER_EN_IOS',
+    UC_BROWSER_IOS: 'UC_BROWSER_IOS',
+    UC_BROWSER_EN_IOS_STATIC: 'UC_BROWSER_EN_IOS_STATIC',
     DU_BROWSER: 'DU_BROWSER', //Also DU HD browser falls here as there is no reliable way to separate them
     OPERA_MINI_IPAD: 'OPERA_MINI_IPAD',
     DESKTOP: 'DESKTOP'
@@ -24,7 +25,8 @@ const UserAgentsRegExp = {
     SAFARI_IPAD: /(?:iPad).+(?:Version\/)/i,
     UC_BROWSER_EN_ANDROID: /Android.+(?!zh-CN).+(?:UCBrowser|UBrowser)/i,
     UC_BROWSER_CN_ANDROID: /Android.+(?:zh-CN).+(?:UCBrowser|UBrowser)/i,
-    UC_BROWSER_EN_IOS: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser))/i,
+    UC_BROWSER_IOS: /(?:(iPhone|iPod|iPad).+(?:UCBrowser|UBrowser)\/[0-9]{2})/i,
+    UC_BROWSER_EN_IOS_STATIC: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser)\/[0-9]\.)/i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
     DU_BROWSER: /bdbrowser/i,
     OPERA_MINI_IPAD: /.+iPad(?!.+Safari)/i,
     DESKTOP: /(?:Mozilla|Opera)(?!.+(?:Android|iPhone|iPod|iPad))/i
