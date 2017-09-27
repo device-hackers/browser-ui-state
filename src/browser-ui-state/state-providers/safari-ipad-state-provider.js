@@ -15,4 +15,12 @@ export default class SafariIpadStateProvider extends StateProvider {
 
         super(screenObj, windowObj, thresholds)
     }
+
+    get state() {
+        if (this._windowObj.navigator.standalone) {
+            return States.SAFARI_HOMESCREEN
+        } else {
+            return super.state
+        }
+    }
 }

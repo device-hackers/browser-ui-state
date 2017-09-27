@@ -1,4 +1,5 @@
 import StateProvider from './state-provider'
+import States from "./states";
 
 export default class SafariIphoneStateProvider extends StateProvider {
     constructor(userAgentObj, screenObj, windowObj) {
@@ -14,5 +15,13 @@ export default class SafariIphoneStateProvider extends StateProvider {
         }
 
         super(screenObj, windowObj, thresholds, userAgentObj)
+    }
+
+    get state() {
+        if (this._windowObj.navigator.standalone) {
+            return States.SAFARI_HOMESCREEN
+        } else {
+            return super.state
+        }
     }
 }

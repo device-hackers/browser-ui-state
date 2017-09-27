@@ -1,4 +1,3 @@
-//ToDO Maybe to rewrite to single run approach used in Detect.js
 export const Devices = {
     SAMSUNG_GALAXY_NOTE_5: 'SAMSUNG_GALAXY_NOTE_5',
     SAMSUNG_GALAXY_NOTE_EDGE: 'SAMSUNG_GALAXY_NOTE_EDGE',

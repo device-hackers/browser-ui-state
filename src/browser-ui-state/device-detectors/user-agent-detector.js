@@ -1,7 +1,3 @@
-//ToDo Maybe to rewrite to single run approach used in Detect.js
-//ToDo Maybe to add known/supported devices to the list, so lib doesn't block user on unknown exceptional devices
-//ToDo Instead of previous item - add hidden workaround - tap quickly 5 times - should prompt user if he(she) is sure
-// to remove swipe up overlay for this device (saved to localstorage)
 export const UserAgents = {
     SAMSUNG_BROWSER: 'SAMSUNG_BROWSER',
     CHROME_ANDROID: 'CHROME_ANDROID',
