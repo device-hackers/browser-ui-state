@@ -4,12 +4,12 @@ export default class UCBrowserENiOSStateProvider extends StateProvider {
     constructor(userAgentObj, screenObj, windowObj) {
         let thresholds = {
             landscape : {
-                collapsed: 30.3,
-                keyboard: 50.4,
+                collapsed: 32.3,
+                keyboard: 60.6,
             },
             portrait : {
-                collapsed: 12.95,
-                keyboard: 26.3
+                collapsed: 13.75,
+                keyboard: 29.1
             }
         }
 
