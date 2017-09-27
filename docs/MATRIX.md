@@ -69,6 +69,8 @@ has nothing to do with downloads, but at least can be used to compare products r
 
 And thanx God we don't have to support buggy [IE Mobile](https://en.wikipedia.org/wiki/Internet_Explorer_Mobile) :beetle:.
 
+Apple's iPod Touch [is not in the scope](https://www.statista.com/statistics/253725/iphone-ipad-and-ipod-sales-comparison/) also.
+
 Information is based on the **September 2017** :calendar: landscape and sorted according to [Mobile Browser Market Share Worldwide](http://gs.statcounter.com/browser-market-share/mobile/worldwide):
 
 Group | OS | Designed for device class | Unique browser ID & install link | Market browser name | Downloads / reviews count | Version & latest release date | Support level 

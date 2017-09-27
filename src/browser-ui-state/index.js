@@ -10,6 +10,7 @@ import UCBrowserENAndroidStateProvider from "./state-providers/ucbrowser-en-andr
 import UCBrowserCNAndroidStateProvider from "./state-providers/ucbrowser-cn-android-state-provider"
 import UCBrowseriOSStateProvider from "./state-providers/ucbrowser-ios-state-provider"
 import StaticStateProvider from "./state-providers/static-state-provider"
+import OperaMiniIphoneStateProvider from "./state-providers/opera-mini-iphone-state-provider"
 
 class BrowserUiState {
     constructor(userAgentObj = window.navigator.userAgent, screenObj = screen, windowObj = window) {
@@ -32,9 +33,12 @@ class BrowserUiState {
                 this._provider = new UCBrowserCNAndroidStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.UC_BROWSER_IOS :
                 this._provider = new UCBrowseriOSStateProvider(userAgentObj, screenObj, windowObj); break
+            case UserAgents.OPERA_MINI_IPHONE :
+                this._provider = new OperaMiniIphoneStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.DU_BROWSER :
             case UserAgents.OPERA_MINI_IPAD :
             case UserAgents.UC_BROWSER_EN_IOS_STATIC :
+            case UserAgents.OPERA_MINI_IPHONE_STATIC :
                 this._provider = new StaticStateProvider(userAgentObj, screenObj, windowObj); break
             case UserAgents.DESKTOP :
                 this._provider = new DesktopStateProvider(userAgentObj, screenObj, windowObj); break
