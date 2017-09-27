@@ -24,7 +24,7 @@ const UserAgentsRegExp = {
     SAMSUNG_BROWSER: /(?:Android.+SamsungBrowser)/i,
     CHROME_ANDROID: /(?:Android(?!.+(?:SamsungBrowser|Version)).+Chrome)(?!.+(?:Edge|UCBrowser|UBrowser|Opera|OPR|MQQBrowser|YaBrowser|baidubrowser|bdbrowser|360 Aphone Browser))/i,
     CHROME_IOS: /(?:iPhone|iPod|iPad).+(?:Chrome|CriOS|CrMo)/i,
-    SAFARI_IPHONE: /(?:iPhone|iPod).+(?:Version\/)/i,
+    SAFARI_IPHONE: /(?:iPhone|iPod).+(?:Version\/)(?!.+MQQBrowser)/i,
     SAFARI_IPAD: /(?:iPad).+(?:Version\/)/i,
     UC_BROWSER_EN_ANDROID: /Android.+(?!zh-CN).+(?:UCBrowser|UBrowser)/i,
     UC_BROWSER_CN_ANDROID: /Android.+(?:zh-CN).+(?:UCBrowser|UBrowser)/i,
