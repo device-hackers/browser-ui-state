@@ -16,6 +16,7 @@ export const UserAgents = {
     OPERA_MINI_IPAD: 'OPERA_MINI_IPAD',
     OPERA_MINI_IPHONE: 'OPERA_MINI_IPHONE',
     OPERA_MINI_IPHONE_STATIC: 'OPERA_MINI_IPHONE_STATIC',
+    QQ_CN_IPHONE: 'QQ_CN_IPHONE',
     DESKTOP: 'DESKTOP'
 }
 
@@ -30,9 +31,10 @@ const UserAgentsRegExp = {
     UC_BROWSER_IOS: /(?:(iPhone|iPod|iPad).+(?:UCBrowser|UBrowser)\/[0-9]{2})/i,
     UC_BROWSER_EN_IOS_STATIC: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser)\/[0-9]\.)/i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
     DU_BROWSER: /bdbrowser/i,
-    OPERA_MINI_IPAD: /.+iPad(?!.+Safari)/i,
-    OPERA_MINI_IPHONE: /.+iPhone.OS.(?!10)[0-9]{2}(?!.+Safari)/i,
-    OPERA_MINI_IPHONE_STATIC: /.+iPhone.OS.(?:10|[0-9]{1}_)(?!.+Safari)/i,
+    OPERA_MINI_IPAD: /iPad(?!.+Safari)/i,
+    OPERA_MINI_IPHONE: /iPhone.OS.(?!10)[0-9]{2}(?!.+Safari)/i,
+    OPERA_MINI_IPHONE_STATIC: /iPhone.OS.(?:10|[0-9]{1}_)(?!.+Safari)/i,
+    QQ_CN_IPHONE: /iPhone.+MQQBrowser/i,
     DESKTOP: /(?:Mozilla|Opera)(?!.+(?:Android|iPhone|iPod|iPad))/i
 }
 
