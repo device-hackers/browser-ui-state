@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - stable
+script: npm run build
+after_success:
+  - surge --project ./dist/ --domain browser-ui-state.surge.sh
+branches:
+  only:
+  - master
