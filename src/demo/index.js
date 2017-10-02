@@ -1,6 +1,7 @@
 import fscreen from 'fscreen'
 import BrowserUiState from '../browser-ui-state'
 
+//ToDo Add version and select state provider to debug info
 class BrowserUiStateDemo {
     constructor() {
         this.browserUiState = new BrowserUiState()
