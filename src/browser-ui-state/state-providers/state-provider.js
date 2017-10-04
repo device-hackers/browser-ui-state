@@ -6,6 +6,7 @@ export default class StateProvider {
     constructor(screenObj, windowObj, thresholds, userAgentObj) {
         this._screenObj = screenObj
         this._windowObj = windowObj
+        console.warn(windowObj)
         this._thresholds = thresholds
         this._userAgentObj = userAgentObj
         this._deviceOrientationDetector = new DeviceOrientationDetector(screenObj, windowObj)
@@ -51,6 +52,7 @@ export default class StateProvider {
     }
 
     get state() {
+        console.error(this._windowObj)
         const deviation = this.deviation
 
         let state = States.EXPANDED
