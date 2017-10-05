@@ -1,7 +1,7 @@
 import fscreen from 'fscreen'
 import BrowserUiState from '../browser-ui-state'
 
-//ToDo Add version and select state provider to debug info
+//ToDo Add version to debug info
 class BrowserUiStateDemo {
     constructor() {
         this.browserUiState = new BrowserUiState()
@@ -55,6 +55,7 @@ class BrowserUiStateDemo {
         write('allReadings', `${dpr} / ${sWH} / ${wWH} / ${screenAngle} / ${screenType} / ` +
             `${html5FullscreenIsAvailable} / ${html5FullscreenIsOn} / ${deviation} / ${state}`)
         write('userAgent', window.navigator.userAgent)
+        write('userAgentName', this.browserUiState._userAgentDetector.userAgent)
         write('dpr', dpr)
         write('sWH', sWH)
         write('wWH', wWH)
