@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class UCBrowserCNAndroidStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         let thresholds = {
             landscape : {
                 collapsed: 30.0,
@@ -13,6 +13,6 @@ export default class UCBrowserCNAndroidStateProvider extends StateProvider {
             }
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
     }
 }

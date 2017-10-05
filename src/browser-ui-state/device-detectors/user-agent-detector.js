@@ -35,10 +35,10 @@ const UserAgentsRegExp = {
 }
 
 export default class UserAgentDetector {
-    constructor(userAgentObj) {
+    constructor(userAgent) {
         this._detectedDevice = null
         for (let regexp in UserAgentsRegExp) {
-            if (UserAgentsRegExp[regexp].test(userAgentObj)) {
+            if (UserAgentsRegExp[regexp].test(userAgent)) {
                 this._detectedDevice = UserAgents[regexp]
                 break
             }

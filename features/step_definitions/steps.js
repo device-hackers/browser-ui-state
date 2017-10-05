@@ -7,21 +7,39 @@ defineSupportCode(function(context) {
     let Then = context.Then
 
     let browserUiState = null
-    let screen = { width: 0, height: 0 }
-    let window = { innerWidth: 0, innerHeight: 0, navigator: { standalone: false } }
+    let win = {
+        innerWidth: 0,
+        innerHeight: 0,
+        screen: {
+            width: 0,
+            height: 0
+        },
+        navigator: {
+            userAgent: '',
+            standalone: false
+        },
+        document: {
+            documentElement: {
+                addEventListener(type, listener, useCapture) { /*NOOP*/ }
+            }
+        },
+        dispatchEvent(event) { /*NOOP*/ }
+    }
 
     let updateScreen = (width, height) => {
-        screen.width = width
-        screen.height = height
+        win.screen.width = width
+        win.screen.height = height
     }
 
     let updateWindow = (width, height) => {
-        window.innerWidth = width
-        window.innerHeight = height
+        win.innerWidth = width
+        win.innerHeight = height
     }
 
-    Given('a user agent equals to {string}', string =>
-        browserUiState = new BrowserUiState(string, screen, window))
+    Given('a user agent equals to {string}', userAgent => {
+        win.navigator.userAgent = userAgent
+        browserUiState = new BrowserUiState(win)
+    })
 
     Given('screen dimensions is {int} x {int}',
         (width, height) => updateScreen(width, height))

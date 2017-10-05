@@ -21,10 +21,10 @@ const DevicesRegExp = {
 }
 
 export default class DeviceDetector {
-    constructor(userAgentObj) {
+    constructor(userAgent) {
         this._detectedDevice = null
         for (let regexp in DevicesRegExp) {
-            if (DevicesRegExp[regexp].test(userAgentObj)) {
+            if (DevicesRegExp[regexp].test(userAgent)) {
                 this._detectedDevice = Devices[regexp]
                 break
             }
@@ -32,7 +32,6 @@ export default class DeviceDetector {
     }
 
     get device() {
-        console.log(`DeviceDetector.device = ${this._detectedDevice}`)
         return this._detectedDevice
     }
 }

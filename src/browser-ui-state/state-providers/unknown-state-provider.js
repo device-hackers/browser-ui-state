@@ -3,7 +3,7 @@ import StateProvider from './state-provider'
 import States from './states'
 
 export default class UnknownStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         const thresholds = {
             landscape : {
                 collapsed: null,
@@ -14,7 +14,7 @@ export default class UnknownStateProvider extends StateProvider {
                 keyboard: null
             }
         }
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
     }
 
     get state() {

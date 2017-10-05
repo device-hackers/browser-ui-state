@@ -2,7 +2,7 @@ import StateProvider from './state-provider'
 import States from "./states";
 
 export default class SafariIphoneStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         const thresholds = {
             landscape : {
                 collapsed: 6.75,
@@ -14,11 +14,11 @@ export default class SafariIphoneStateProvider extends StateProvider {
             }
         }
 
-        super(screenObj, windowObj, thresholds, userAgentObj)
+        super(win, thresholds)
     }
 
     get state() {
-        if (this._windowObj.navigator.standalone) {
+        if (this._win.navigator.standalone) {
             return States.SAFARI_HOMESCREEN
         } else {
             return super.state

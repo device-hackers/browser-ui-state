@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class QqCnIphoneStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         let thresholds = {
             landscape : {
                 collapsed: 8.45,
@@ -27,9 +27,10 @@ export default class QqCnIphoneStateProvider extends StateProvider {
         }
 
         function isIphone4() {
-            return screenObj.height === 480
+            return win.screen.height === 480
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
+        this._device = `isIphone4=${isIphone4()}`
     }
 }

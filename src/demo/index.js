@@ -57,6 +57,7 @@ class BrowserUiStateDemo {
             `${html5FullscreenIsAvailable} / ${html5FullscreenIsOn} / ${deviation} / ${state}`)
         write('userAgent', window.navigator.userAgent)
         write('userAgentName', this.browserUiState._userAgentDetector.userAgent)
+        write('deviceName', this.browserUiState._provider._device ? this.browserUiState._provider._device : 'null')
         write('dpr', dpr)
         write('sWH', sWH)
         write('wWH', wWH)

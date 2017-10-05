@@ -14,39 +14,39 @@ import OperaMiniIphoneStateProvider from "./state-providers/opera-mini-iphone-st
 import QqCnIphoneStateProvider from "./state-providers/qq-cn-iphone-state-provider"
 
 class BrowserUiState {
-    constructor(userAgentObj = window.navigator.userAgent, screenObj = screen, windowObj = window) {
-        this._userAgentDetector = new UserAgentDetector(userAgentObj)
+    constructor(win = window) {
+        this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
 
         switch (this._userAgentDetector.userAgent) {
             case UserAgents.CHROME_ANDROID :
-                this._provider = new ChromeAndroidStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new ChromeAndroidStateProvider(win); break
             case UserAgents.CHROME_IOS :
-                this._provider = new ChromeIOSStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new ChromeIOSStateProvider(win); break
             case UserAgents.SAFARI_IPHONE :
-                this._provider = new SafariIphoneStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new SafariIphoneStateProvider(win); break
             case UserAgents.SAFARI_IPAD :
-                this._provider = new SafariIpadStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new SafariIpadStateProvider(win); break
             case UserAgents.SAMSUNG_BROWSER :
-                this._provider = new SamsungBrowserStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new SamsungBrowserStateProvider(win); break
             case UserAgents.UC_BROWSER_EN_ANDROID :
-                this._provider = new UCBrowserENAndroidStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new UCBrowserENAndroidStateProvider(win); break
             case UserAgents.UC_BROWSER_CN_ANDROID :
-                this._provider = new UCBrowserCNAndroidStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new UCBrowserCNAndroidStateProvider(win); break
             case UserAgents.UC_BROWSER_IOS :
-                this._provider = new UCBrowseriOSStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new UCBrowseriOSStateProvider(win); break
             case UserAgents.OPERA_MINI_IPHONE :
-                this._provider = new OperaMiniIphoneStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new OperaMiniIphoneStateProvider(win); break
             case UserAgents.QQ_CN_IPHONE :
-                this._provider = new QqCnIphoneStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new QqCnIphoneStateProvider(win); break
             case UserAgents.DU_BROWSER :
             case UserAgents.OPERA_MINI_IPAD :
             case UserAgents.UC_BROWSER_EN_IOS_STATIC :
             case UserAgents.OPERA_MINI_IPHONE_STATIC :
-                this._provider = new StaticStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new StaticStateProvider(win); break
             case UserAgents.DESKTOP :
-                this._provider = new DesktopStateProvider(userAgentObj, screenObj, windowObj); break
+                this._provider = new DesktopStateProvider(win); break
             default :
-                this._provider = new UnknownStateProvider(userAgentObj, screenObj, windowObj)
+                this._provider = new UnknownStateProvider(win)
         }
     }
 

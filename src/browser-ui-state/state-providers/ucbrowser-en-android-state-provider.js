@@ -2,7 +2,7 @@ import StateProvider from './state-provider'
 import DeviceDetector, {Devices} from "../device-detectors/device-detector"
 
 export default class UCBrowserENAndroidStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         let thresholds = {
             landscape : {
                 collapsed: 5.75,
@@ -14,7 +14,7 @@ export default class UCBrowserENAndroidStateProvider extends StateProvider {
             }
         }
 
-        const deviceDetector = new DeviceDetector(userAgentObj)
+        const deviceDetector = new DeviceDetector(win.navigator.userAgent)
 
         switch (deviceDetector.device) {
             case Devices.LENOVO_A889 :
@@ -31,6 +31,7 @@ export default class UCBrowserENAndroidStateProvider extends StateProvider {
             }; break
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
+        this._device = deviceDetector.device
     }
 }

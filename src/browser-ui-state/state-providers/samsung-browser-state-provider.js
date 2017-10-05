@@ -2,7 +2,7 @@ import StateProvider from './state-provider'
 import DeviceDetector, {Devices} from "../device-detectors/device-detector"
 
 export default class SamsungBrowserStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         let thresholds = {
             landscape : {
                 collapsed: 19.2,
@@ -14,7 +14,7 @@ export default class SamsungBrowserStateProvider extends StateProvider {
             }
         }
 
-        const deviceDetector = new DeviceDetector(userAgentObj)
+        const deviceDetector = new DeviceDetector(win.navigator.userAgent)
 
         switch (deviceDetector.device) {
             case Devices.SAMSUNG_GALAXY_NOTE_EDGE : thresholds = {
@@ -29,6 +29,7 @@ export default class SamsungBrowserStateProvider extends StateProvider {
             }; break
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
+        this._device = deviceDetector.device
     }
 }

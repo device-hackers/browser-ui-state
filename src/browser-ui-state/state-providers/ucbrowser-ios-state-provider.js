@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class UCBrowseriOSStateProvider extends StateProvider {
-    constructor(userAgentObj, screenObj, windowObj) {
+    constructor(win) {
         let thresholds = {
             landscape : {
                 collapsed: 37.05,
@@ -27,9 +27,10 @@ export default class UCBrowseriOSStateProvider extends StateProvider {
         }
 
         function isIphone4WithUcCN() {
-            return /iPhone.+zh-CN.+UCBrowser/i.test(userAgentObj) && screenObj.height === 480
+            return /iPhone.+zh-CN.+UCBrowser/i.test(win.navigator.userAgent) && win.screen.height === 480
         }
 
-        super(screenObj, windowObj, thresholds)
+        super(win, thresholds)
+        this._device = `isIphone4WithUcCN=${isIphone4WithUcCN()}`
     }
 }
