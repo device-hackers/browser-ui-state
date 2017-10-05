@@ -9,6 +9,8 @@ export default class StateProvider {
         this._thresholds = thresholds
         this._userAgentObj = userAgentObj
         this._deviceOrientationDetector = new DeviceOrientationDetector(screenObj, windowObj)
+        this._keyBoardShown = null
+        this._handleKeyboard()
     }
 
     get orientation() {
@@ -58,9 +60,13 @@ export default class StateProvider {
         if (fscreen.fullscreenElement) {
             state = States.HTML5_FULLSCREEN
         } else if (deviation > this.keyboardThreshold) {
-            state = States.KEYBOARD
+            state = States.UNKNOWN
         } else if (deviation > this.collapsedThreshold) {
             state = States.COLLAPSED
+        }
+
+        if (this._keyBoardShown) {
+            state = States.KEYBOARD
         }
 
         return state
@@ -78,6 +84,35 @@ export default class StateProvider {
     }
 
     isIphoneX() {
-        return /iPhone/i.test(this._userAgentObj) && this._screenObj.height === 812 //ToDo Check if all browsers report the same
+        return /iPhone/i.test(this._userAgentObj) && this._screenObj.height === 812
+    }
+
+    // ToDo add input focus handling for iOS 10+ WARNING - doesn't work well in Android due to possibility to hide keyboard via button on navigatio bar which leads to no focusout events at all!
+    _handleKeyboard() {
+        document.documentElement.addEventListener('focus', getKeyboardShownHandler(true).bind(this), true);
+        document.documentElement.addEventListener('blur', getKeyboardShownHandler(false).bind(this), true);
+        document.documentElement.addEventListener('focusout', getKeyboardShownHandler(false).bind(this), true);
+
+        function getKeyboardShownHandler(shown) {
+            return function (e) {
+                if (isEditableInput(e.target) && !isEditableInput(e.relatedTarget)) {
+                    this._keyBoardShown = shown
+                    window.dispatchEvent(new Event('resize'));
+                }
+            }
+        }
+
+        function isEditableInput(element) {
+            if (!element) {
+                return false;
+            }
+
+            let type = element.getAttribute('type');
+            let ignoredTypes = ['button', 'checkbox', 'file', 'hidden', 'image', 'radio', 'reset', 'submit'];
+            let tagName = element.tagName.toLowerCase();
+
+            return (tagName === 'textarea' || tagName === "select" ||
+                (tagName === 'input' && ignoredTypes.indexOf(type) === -1));
+        }
     }
 }
