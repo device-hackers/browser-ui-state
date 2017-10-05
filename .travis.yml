@@ -9,3 +9,4 @@ deploy:
   provider: surge
   project: ./dist/
   domain: browser-ui-state.surge.sh
+  skip_cleanup: true
