@@ -46,7 +46,6 @@ export default class UserAgentDetector {
     }
 
     get userAgent() {
-        console.debug(`UserAgentDetector.userAgent = ${this._detectedDevice}`)
         return this._detectedDevice
     }
 }

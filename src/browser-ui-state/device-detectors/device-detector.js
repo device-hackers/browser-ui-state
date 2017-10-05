@@ -32,7 +32,7 @@ export default class DeviceDetector {
     }
 
     get device() {
-        console.debug(`DeviceDetector.device = ${this._detectedDevice}`)
+        console.log(`DeviceDetector.device = ${this._detectedDevice}`)
         return this._detectedDevice
     }
 }

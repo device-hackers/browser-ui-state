@@ -1,7 +1,7 @@
 import fscreen from 'fscreen'
 import BrowserUiState from '../browser-ui-state'
+import {version} from '../../package.json'
 
-//ToDo Add version to debug info
 class BrowserUiStateDemo {
     constructor() {
         this.browserUiState = new BrowserUiState()
@@ -52,6 +52,7 @@ class BrowserUiStateDemo {
         const state = this.browserUiState.state
         document.getElementById('html5FullscreenBtn').disabled = !fscreen.fullscreenEnabled
 
+        write('ver', version)
         write('allReadings', `${dpr} / ${sWH} / ${wWH} / ${screenAngle} / ${screenType} / ` +
             `${html5FullscreenIsAvailable} / ${html5FullscreenIsOn} / ${deviation} / ${state}`)
         write('userAgent', window.navigator.userAgent)
