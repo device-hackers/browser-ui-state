@@ -17,23 +17,29 @@ export const UserAgents = {
 }
 
 const UserAgentsRegExp = {
-    SAMSUNG_BROWSER: /(?:Android.+SamsungBrowser)/i,
-    CHROME_ANDROID: /(?:Android(?!.+(?:SamsungBrowser|Version)).+Chrome)(?!.+(?:Edge|UCBrowser|UBrowser|Opera|OPR|MQQBrowser|YaBrowser|baidubrowser|bdbrowser|360 Aphone Browser))/i,
-    CHROME_IOS: /(?:iPhone|iPod|iPad).+(?:Chrome|CriOS|CrMo)/i,
-    SAFARI_IPHONE: /(?:iPhone|iPod).+(?:Version\/)(?!.+MQQBrowser)/i,
-    SAFARI_IPAD: /(?:iPad).+(?:Version\/)/i,
-    UC_BROWSER_EN_ANDROID: /Android.+(?!zh-CN).+(?:UCBrowser|UBrowser)/i,
-    UC_BROWSER_CN_ANDROID: /Android.+(?:zh-CN).+(?:UCBrowser|UBrowser)/i,
-    UC_BROWSER_IOS: /(?:(iPhone|iPod|iPad).+(?:UCBrowser|UBrowser)\/[0-9]{2})/i,
-    UC_BROWSER_EN_IOS_STATIC: /(?:(iPhone|iPod|iPad).+en-.+(?:UCBrowser|UBrowser)\/[0-9]\.)/i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
-    DU_BROWSER: /bdbrowser/i,
-    OPERA_MINI_IPAD: /iPad(?!.+Safari)/i,
-    OPERA_MINI_IPHONE: /iPhone.OS.(?!10)[0-9]{2}(?!.+Safari)/i,
-    OPERA_MINI_IPHONE_STATIC: /iPhone.OS.(?:10|[0-9]{1}_)(?!.+Safari)/i,
-    QQ_CN_IPHONE: /iPhone.+MQQBrowser/i,
-    DESKTOP: /(?:Mozilla|Opera)(?!.+(?:Android|iPhone|iPod|iPad))/i
+    SAMSUNG_BROWSER: /\WAndroid\W.*\WSamsungBrowser\W/i,
+    CHROME_ANDROID: /\WAndroid\W(?!.*\W(?:SamsungBrowser|Version)\W).*\WChrome\W(?!.*\W(?:Edge|UCBrowser|UBrowser|Opera|OPR|MQQBrowser|YaBrowser|baidubrowser|bdbrowser|360 Aphone Browser)\W)/i,
+    CHROME_IOS: /\W(?:iPhone|iPod|iPad)\W.*\W(?:Chrome|CriOS|CrMo)\W/i,
+    SAFARI_IPHONE: /\W(?:iPhone|iPod)\W.*\WVersion\/(?!.*\WMQQBrowser\W)/i,
+    SAFARI_IPAD: /\WiPad\W.*\WVersion\//i,
+    UC_BROWSER_EN_ANDROID: /\WAndroid\W.*(?!\Wzh-CN\W).*\WUCBrowser\W/i,
+    UC_BROWSER_CN_ANDROID: /\WAndroid\W.*\Wzh-CN\W.*\WUCBrowser\W/i,
+    UC_BROWSER_IOS: /\W(?:iPhone|iPod|iPad)\W.*\WUCBrowser\/[0-9]{2}/i,
+    UC_BROWSER_EN_IOS_STATIC: /\W(?:iPhone|iPod|iPad)\W.*\Wen-.*\WUCBrowser\/[0-9]\./i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
+    DU_BROWSER: /\Wbdbrowser\W/i,
+    OPERA_MINI_IPAD: /\WiPad\W(?!.*\WSafari\W)/i,
+    OPERA_MINI_IPHONE: /\WiPhone.OS.(?!10)[0-9]{2}(?!.*\WSafari\W)/i,
+    OPERA_MINI_IPHONE_STATIC: /\WiPhone.OS.(?:10|[0-9]{1}_)(?!.*\WSafari\W)/i,
+    QQ_CN_IPHONE: /\WiPhone\W.*\WMQQBrowser\W/i,
+    DESKTOP: /(?:^|\W)(?:Mozilla|Opera)\W(?!.*\W(?:Android|iPhone|iPod|iPad)\W)/i
 }
 
+/**
+ * Iterates over all regular expressions and tries to find first match.
+ * Warning! RegExps should be constructed in the way that the order of their appearance in containing object
+ * should not matter (e.g. if CHROME_ANDROID would not list all other browsers built on its engine - that
+ * would mean detection will always return CHROME_ANDROID for all of them, unless it is moved to the very bottom.
+ */
 export default class UserAgentDetector {
     constructor(userAgent) {
         this._detectedDevice = null
