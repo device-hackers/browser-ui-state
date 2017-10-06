@@ -1,7 +1,7 @@
-import StateProvider from './state-provider'
+import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 import States from './states'
 
-export default class SafariIpadStateProvider extends StateProvider {
+export default class SafariIpadStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win) {
         const thresholds = {
             landscape : {

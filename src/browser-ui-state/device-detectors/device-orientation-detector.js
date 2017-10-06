@@ -20,7 +20,7 @@ export default class DeviceOrientationDetector {
             if (this._win.innerWidth > this._win.innerHeight) {
                 return Orientation.LANDSCAPE
             } else {
-                return Orientation.PORTRAIT //Can't handle Portrait + On-screen keyboard case!
+                return Orientation.PORTRAIT //TODO Can't handle Portrait + On-screen keyboard case! (Add keyboardShown)
             }
         }
     }

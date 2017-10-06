@@ -28,8 +28,8 @@ const UserAgentsRegExp = {
     UC_BROWSER_EN_IOS_STATIC: /\W(?:iPhone|iPod|iPad)\W.*\Wen-.*\WUCBrowser\/[0-9]\./i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
     DU_BROWSER: /\Wbdbrowser\W/i,
     OPERA_MINI_IPAD: /\WiPad\W(?!.*\WSafari\W)/i,
-    OPERA_MINI_IPHONE: /\WiPhone.OS.(?!10)[0-9]{2}(?!.*\WSafari\W)/i,
-    OPERA_MINI_IPHONE_STATIC: /\WiPhone.OS.(?:10|[0-9]{1}_)(?!.*\WSafari\W)/i,
+    OPERA_MINI_IPHONE: /\WiPhone.OS.(?!10)[0-9]{2}(?!.*\WSafari\W)/i, //Aimed to match iOS 11+
+    OPERA_MINI_IPHONE_STATIC: /\WiPhone.OS.(?:10|[0-9]{1}_)(?!.*\WSafari\W)/i, //Aimed to match iOS 0-10 inclusively
     QQ_CN_IPHONE: /\WiPhone\W.*\WMQQBrowser\W/i,
     DESKTOP: /(?:^|\W)(?:Mozilla|Opera)\W(?!.*\W(?:Android|iPhone|iPod|iPad)\W)/i
 }

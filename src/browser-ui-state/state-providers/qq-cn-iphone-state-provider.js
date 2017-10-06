@@ -1,6 +1,6 @@
-import StateProvider from './state-provider'
+import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 
-export default class QqCnIphoneStateProvider extends StateProvider {
+export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win) {
         let thresholds = {
             landscape : {

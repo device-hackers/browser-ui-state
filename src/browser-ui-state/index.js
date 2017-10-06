@@ -39,14 +39,21 @@ class BrowserUiState {
             case UserAgents.QQ_CN_IPHONE :
                 this._provider = new QqCnIphoneStateProvider(win); break
             case UserAgents.DU_BROWSER :
-            case UserAgents.OPERA_MINI_IPAD :
             case UserAgents.UC_BROWSER_EN_IOS_STATIC :
             case UserAgents.OPERA_MINI_IPHONE_STATIC :
+            case UserAgents.OPERA_MINI_IPAD :
                 this._provider = new StaticStateProvider(win); break
             case UserAgents.DESKTOP :
                 this._provider = new DesktopStateProvider(win); break
             default :
                 this._provider = new UnknownStateProvider(win)
+        }
+
+        //Thanx Opera Mini iOS for this :( It has completely the same user-agent as Safari on homescreen/standalone
+        if (win.navigator.standalone && /\WiPhone\W/i.test(win.navigator.userAgent)) {
+            this._provider = new SafariIphoneStateProvider(win)
+        } else if (win.navigator.standalone && /\WiPad\W/i.test(win.navigator.userAgent)) {
+            this._provider = new SafariIpadStateProvider(win)
         }
     }
 

@@ -1,6 +1,6 @@
-import StateProvider from './state-provider'
+import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 
-export default class UcbrowserIosStateProvider extends StateProvider {
+export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win) {
         let thresholds = {
             landscape : {

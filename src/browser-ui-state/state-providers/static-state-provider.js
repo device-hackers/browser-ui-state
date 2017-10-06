@@ -1,8 +1,8 @@
 import fscreen from 'fscreen'
-import StateProvider from './state-provider'
+import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 import States from './states'
 
-export default class StaticStateProvider extends StateProvider {
+export default class StaticStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win) {
         const thresholds = {
             landscape : {
@@ -18,7 +18,9 @@ export default class StaticStateProvider extends StateProvider {
     }
 
     get state() {
-        if (fscreen.fullscreenElement) {
+        if (super.state === States.KEYBOARD_NO_RESIZE) {
+            return States.KEYBOARD_NO_RESIZE
+        } else if (fscreen.fullscreenElement) {
             return States.HTML5_FULLSCREEN
         } else {
             return States.STATIC
