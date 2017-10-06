@@ -1,5 +1,5 @@
 import StateProvider from './state-provider'
-import States from "./states";
+import States from './states'
 
 export default class SafariIpadStateProvider extends StateProvider {
     constructor(win) {

@@ -1,6 +1,6 @@
 import StateProvider from './state-provider'
 
-export default class UCBrowserCNAndroidStateProvider extends StateProvider {
+export default class UcbrowserCnAndroidStateProvider extends StateProvider {
     constructor(win) {
         let thresholds = {
             landscape : {

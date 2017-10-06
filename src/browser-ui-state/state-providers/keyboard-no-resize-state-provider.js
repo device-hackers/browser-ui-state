@@ -1,14 +1,16 @@
 import StateProvider from './state-provider'
-import States from "./states";
+import States from './states'
 
-export default class KeyboardStateProvider extends StateProvider {
+export default class KeyboardNoResizeStateProvider extends StateProvider {
     constructor(win, thresholds) {
         super(win, thresholds)
+        this._keyboardShown = null
+        this._handleKeyboard()
     }
 
     get state() {
-        if (this._win.navigator.standalone) {
-            return States.SAFARI_HOMESCREEN
+        if (this._keyboardShown) {
+            return States.KEYBOARD_NO_RESIZE
         } else {
             return super.state
         }
@@ -22,7 +24,7 @@ export default class KeyboardStateProvider extends StateProvider {
         function getKeyboardShownHandler(shown) {
             return function (e) {
                 if (isEditableInput(e.target) && !isEditableInput(e.relatedTarget)) {
-                    this._keyBoardShown = shown
+                    this._keyboardShown = shown
                     this._win.dispatchEvent(new Event('resize'));
                 }
             }
@@ -37,7 +39,7 @@ export default class KeyboardStateProvider extends StateProvider {
             let ignoredTypes = ['button', 'checkbox', 'file', 'hidden', 'image', 'radio', 'reset', 'submit'];
             let tagName = element.tagName.toLowerCase();
 
-            return (tagName === 'textarea' || tagName === "select" ||
+            return (tagName === 'textarea' || tagName === 'select' ||
                 (tagName === 'input' && ignoredTypes.indexOf(type) === -1));
         }
     }

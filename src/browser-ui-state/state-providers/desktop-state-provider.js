@@ -21,7 +21,7 @@ export default class DesktopStateProvider extends StateProvider {
         if (fscreen.fullscreenElement) {
             return States.DESKTOP_HTML5_FULLSCREEN
         } else {
-            return States.DESKTOP_EXPANDED
+            return States.DESKTOP
         }
     }
 }

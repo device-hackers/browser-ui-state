@@ -1,6 +1,6 @@
 import StateProvider from './state-provider'
 
-export default class UCBrowseriOSStateProvider extends StateProvider {
+export default class UcbrowserIosStateProvider extends StateProvider {
     constructor(win) {
         let thresholds = {
             landscape : {

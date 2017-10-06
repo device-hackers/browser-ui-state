@@ -1,17 +1,17 @@
 import UserAgentDetector, {UserAgents} from './device-detectors/user-agent-detector'
 import ChromeAndroidStateProvider from './state-providers/chrome-android-state-provider'
-import ChromeIOSStateProvider from './state-providers/chrome-ios-state-provider'
+import ChromeIosStateProvider from './state-providers/chrome-ios-state-provider'
 import SafariIphoneStateProvider from './state-providers/safari-iphone-state-provider'
 import SafariIpadStateProvider from './state-providers/safari-ipad-state-provider'
 import SamsungBrowserStateProvider from './state-providers/samsung-browser-state-provider'
 import DesktopStateProvider from './state-providers/desktop-state-provider'
 import UnknownStateProvider from './state-providers/unknown-state-provider'
-import UCBrowserENAndroidStateProvider from "./state-providers/ucbrowser-en-android-state-provider"
-import UCBrowserCNAndroidStateProvider from "./state-providers/ucbrowser-cn-android-state-provider"
-import UCBrowseriOSStateProvider from "./state-providers/ucbrowser-ios-state-provider"
-import StaticStateProvider from "./state-providers/static-state-provider"
-import OperaMiniIphoneStateProvider from "./state-providers/opera-mini-iphone-state-provider"
-import QqCnIphoneStateProvider from "./state-providers/qq-cn-iphone-state-provider"
+import UcbrowserEnAndroidStateProvider from './state-providers/ucbrowser-en-android-state-provider'
+import UcbrowserCnAndroidStateProvider from './state-providers/ucbrowser-cn-android-state-provider'
+import UcbrowserIosStateProvider from './state-providers/ucbrowser-ios-state-provider'
+import StaticStateProvider from './state-providers/static-state-provider'
+import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-state-provider'
+import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 
 class BrowserUiState {
     constructor(win = window) {
@@ -21,7 +21,7 @@ class BrowserUiState {
             case UserAgents.CHROME_ANDROID :
                 this._provider = new ChromeAndroidStateProvider(win); break
             case UserAgents.CHROME_IOS :
-                this._provider = new ChromeIOSStateProvider(win); break
+                this._provider = new ChromeIosStateProvider(win); break
             case UserAgents.SAFARI_IPHONE :
                 this._provider = new SafariIphoneStateProvider(win); break
             case UserAgents.SAFARI_IPAD :
@@ -29,11 +29,11 @@ class BrowserUiState {
             case UserAgents.SAMSUNG_BROWSER :
                 this._provider = new SamsungBrowserStateProvider(win); break
             case UserAgents.UC_BROWSER_EN_ANDROID :
-                this._provider = new UCBrowserENAndroidStateProvider(win); break
+                this._provider = new UcbrowserEnAndroidStateProvider(win); break
             case UserAgents.UC_BROWSER_CN_ANDROID :
-                this._provider = new UCBrowserCNAndroidStateProvider(win); break
+                this._provider = new UcbrowserCnAndroidStateProvider(win); break
             case UserAgents.UC_BROWSER_IOS :
-                this._provider = new UCBrowseriOSStateProvider(win); break
+                this._provider = new UcbrowserIosStateProvider(win); break
             case UserAgents.OPERA_MINI_IPHONE :
                 this._provider = new OperaMiniIphoneStateProvider(win); break
             case UserAgents.QQ_CN_IPHONE :

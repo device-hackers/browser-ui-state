@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
-import DeviceDetector, {Devices} from "../device-detectors/device-detector"
+import DeviceDetector, {Devices} from '../device-detectors/device-detector'
 
-export default class UCBrowserENAndroidStateProvider extends StateProvider {
+export default class UcbrowserEnAndroidStateProvider extends StateProvider {
     constructor(win) {
         let thresholds = {
             landscape : {

@@ -7,8 +7,6 @@ export default class StateProvider {
         this._win = win
         this._thresholds = thresholds
         this._deviceOrientationDetector = new DeviceOrientationDetector(win)
-        this._keyBoardShown = null
-        this._handleKeyboard()
     }
 
     get orientation() {
@@ -56,15 +54,11 @@ export default class StateProvider {
         let state = States.EXPANDED
 
         if (fscreen.fullscreenElement) {
-            state = States.HTML5_FULLSCREEN //ToDo wrong! how about keyboard in fullscreen?
+            state = States.HTML5_FULLSCREEN //Case with keyboard in HTML5 fullscreen mode can't be traced correctly
         } else if (deviation > this.keyboardThreshold) {
             state = States.KEYBOARD
         } else if (deviation > this.collapsedThreshold) {
             state = States.COLLAPSED
-        }
-
-        if (this._keyBoardShown) {
-            state = States.KEYBOARD
         }
 
         return state
@@ -83,34 +77,5 @@ export default class StateProvider {
 
     isIphoneX() {
         return /\WiPhone\W/i.test(this._win.navigator.userAgent) && this._win.screen.height === 812
-    }
-
-    // ToDo add input focus handling for iOS 10+ WARNING - doesn't work well in Android due to possibility to hide keyboard via button on navigatio bar which leads to no focusout events at all!
-    _handleKeyboard() {
-        this._win.document.documentElement.addEventListener('focus', getKeyboardShownHandler(true).bind(this), true);
-        this._win.document.documentElement.addEventListener('blur', getKeyboardShownHandler(false).bind(this), true);
-        this._win.document.documentElement.addEventListener('focusout', getKeyboardShownHandler(false).bind(this), true);
-
-        function getKeyboardShownHandler(shown) {
-            return function (e) {
-                if (isEditableInput(e.target) && !isEditableInput(e.relatedTarget)) {
-                    this._keyBoardShown = shown
-                    this._win.dispatchEvent(new Event('resize'));
-                }
-            }
-        }
-
-        function isEditableInput(element) {
-            if (!element) {
-                return false;
-            }
-
-            let type = element.getAttribute('type');
-            let ignoredTypes = ['button', 'checkbox', 'file', 'hidden', 'image', 'radio', 'reset', 'submit'];
-            let tagName = element.tagName.toLowerCase();
-
-            return (tagName === 'textarea' || tagName === "select" ||
-                (tagName === 'input' && ignoredTypes.indexOf(type) === -1));
-        }
     }
 }
