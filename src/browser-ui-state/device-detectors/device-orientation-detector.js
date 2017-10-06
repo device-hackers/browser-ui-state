@@ -11,7 +11,7 @@ export default class DeviceOrientationDetector {
     get orientation() {
         const orientationType = this._win.screen.orientation ? this._win.screen.orientation.type : null
         if (orientationType) {
-            if (orientationType.indexOf(Orientation.LANDSCAPE.toLowerCase()) != -1) {
+            if (orientationType.indexOf(Orientation.LANDSCAPE.toLowerCase()) !== -1) {
                 return Orientation.LANDSCAPE
             } else {
                 return Orientation.PORTRAIT
