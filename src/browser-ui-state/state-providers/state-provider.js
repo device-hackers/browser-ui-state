@@ -82,7 +82,7 @@ export default class StateProvider {
     }
 
     isIphoneX() {
-        return /iPhone/i.test(this._win.navigator.userAgent) && this._win.screen.height === 812
+        return /\WiPhone\W/i.test(this._win.navigator.userAgent) && this._win.screen.height === 812
     }
 
     // ToDo add input focus handling for iOS 10+ WARNING - doesn't work well in Android due to possibility to hide keyboard via button on navigatio bar which leads to no focusout events at all!

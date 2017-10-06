@@ -27,7 +27,8 @@ export default class UCBrowseriOSStateProvider extends StateProvider {
         }
 
         function isIphone4WithUcCN() {
-            return /iPhone.+zh-CN.+UCBrowser/i.test(win.navigator.userAgent) && win.screen.height === 480
+            return /\WiPhone\W.*\Wzh-CN\W.*\WUCBrowser\W/i.test(win.navigator.userAgent) &&
+                win.screen.height === 480
         }
 
         super(win, thresholds)
