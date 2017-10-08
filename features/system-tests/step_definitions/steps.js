@@ -1,7 +1,6 @@
 import BrowserUiState from '../../../src/browser-ui-state/index'
 import {defineSupportCode} from 'cucumber'
 
-//TODO Single entry feature files for all state providers
 defineSupportCode(function(context) {
     let Given = context.Given
     let When = context.When
