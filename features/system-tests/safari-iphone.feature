@@ -2,22 +2,22 @@ Feature: Safari iPhone
 
   Scenario Outline: Regular scenario
     Given a user agent equals to <user-agent-string>
-    Given screen dimensions is <screen-l>
-    And window dimensions is <win-init-l>
+      And screen dimensions is <screen-l>
+      And window dimensions is <win-init-l>
     Then browser ui state should be "COLLAPSED"
     When after swipe up window dimensions changes to <win-swiped-l>
     Then browser ui state should be "EXPANDED"
 
     When browser is rotated to portrait
-    And screen dimensions changes to <screen-p>
-    And window dimensions changes to <win-init-p>
+      And screen dimensions changes to <screen-p>
+      And window dimensions changes to <win-init-p>
     Then browser ui state should be "COLLAPSED"
     When after swipe up window dimensions changes to <win-swiped-p>
     Then browser ui state should be "EXPANDED"
 
   Examples:
     | device         | os-ver | ua-ver | ua-mode              | screen-l  | win-init-l | win-swiped-l | screen-p  | win-init-p | win-swiped-p | user-agent-string |
-    | iPhone 7       | 10.2   | 10     |                      | 375 x 667 | 667 x 331  | 667 x 375    | 375 x 667 | 375 x 559  | 375 x 627    | "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" |
+    | iPhone 7       | 10.2   | 10     |                      | 375 x 667 | 667 x 331  | 667 x 375    | 375 x 667 | 375 x 559  | 375 x 627    | "1Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" |
     | iPhone 6S Plus | 10.1   | 10     |                      | 414 x 736 | 736 x 370  | 736 x 414    | 414 x 736 | 414 x 628  | 414 x 696    | "Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0 Mobile/14B100 Safari/602.1" |
     | iPhone 6S Plus | 10.1   | 10     | "Show tab bar" is on | 414 x 736 | 736 x 337  | 736 x 414    | 414 x 736 | 414 x 628  | 414 x 696    | "Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0 Mobile/14B100 Safari/602.1" |
     | iPhone 5S      | 9.3    | 9      |                      | 320 x 568 | 568 x 232  | 568 x 320    | 320 x 568 | 320 x 460  | 320 x 529    | "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 Mobile/14G60 Safari/602.1" |

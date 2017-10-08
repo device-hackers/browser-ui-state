@@ -11,4 +11,5 @@ export default {
                                         // browsers which are known to behave like this, no programmatic way to detect this in other way
     SAFARI_HOMESCREEN:        'SAFARI_HOMESCREEN', //e.g. no browser's UI, page added as app to homescreen
     UNKNOWN:                  'UNKNOWN' //e.g. browser is unknown to the library, so impossible to find-out it's state
+    //TODO Detect split screen (landscape easy - diff between screen.width and win.innerWidth; portrait hard - diff + keyboardShown
 }
