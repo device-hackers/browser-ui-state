@@ -9,7 +9,7 @@ export default class DeviceOrientationDetector {
     constructor(win) {
         this._win = win
         this._keyboardNoResizeDetector = new KeyboardNoResizeDetector(win)
-        this._tooSquareViewportThreshold = 2.4;
+        this._tooSquareViewportThreshold = 1.4;
     }
 
     get orientation() {
@@ -31,6 +31,9 @@ export default class DeviceOrientationDetector {
         }
     }
 
+    /**
+     * TODO add resize handling as must, because Pixel QQ EN in ladscape after showing and hiding keyboard with OS nav bar - reports portrait
+     */
     _getOrientationLegacy(width, height, keyboardShown) {
         if (width > height && !keyboardShown) {
             return Orientation.LANDSCAPE

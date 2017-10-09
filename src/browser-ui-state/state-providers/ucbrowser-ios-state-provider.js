@@ -1,5 +1,12 @@
 import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 
+/**
+ * The fact this class extends KeyboardNoResizeStateProvider is not 100% accurate due to:
+ * - UC EN regular mode : keyboard resizes viewport
+ * - UC EN fullscreen   : no resize
+ * - UC CN regular mode : keyboard resizes viewport
+ * - UC CN fullscreen   : keyboard resizes viewport
+ */
 export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win) {
         let thresholds = {
