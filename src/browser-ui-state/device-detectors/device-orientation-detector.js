@@ -21,6 +21,7 @@ export default class DeviceOrientationDetector {
                 return Orientation.LANDSCAPE
             } else {
                 return Orientation.PORTRAIT //TODO Can't handle Portrait + On-screen keyboard case! (Add keyboardShown)
+                //2.4 is threshold
             }
         }
     }
