@@ -9,7 +9,7 @@ export default class DeviceOrientationDetector {
     constructor(win) {
         this._win = win
         this._keyboardNoResizeDetector = new KeyboardNoResizeDetector(win)
-        this._tooSquareViewportThreshold = 1.4;
+        this._tooSquareViewportThreshold = 1.55;
     }
 
     get orientation() {
