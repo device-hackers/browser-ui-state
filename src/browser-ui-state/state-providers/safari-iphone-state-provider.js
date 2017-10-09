@@ -5,11 +5,11 @@ export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProv
     constructor(win) {
         const thresholds = {
             landscape : {
-                collapsed: 6.75,
+                collapsed: 5.9,
                 keyboard: 48.0,
             },
             portrait : {
-                collapsed: 12.0,
+                collapsed: 11.45,
                 keyboard: 32.7
             }
         }
