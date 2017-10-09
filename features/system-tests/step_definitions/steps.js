@@ -1,5 +1,6 @@
-import BrowserUiState from '../../../src/browser-ui-state/index'
 import {defineSupportCode} from 'cucumber'
+import {should} from 'chai'; should();
+import BrowserUiState from '../../../src/browser-ui-state/index'
 
 defineSupportCode(function(context) {
     let Given = context.Given
@@ -80,9 +81,7 @@ defineSupportCode(function(context) {
         this.updateWindow(width, height)
     })
 
-    Then('browser ui state should be {string}', function(state) {
-        if (this.browserUiState.state !== state) {
-            throw new Error(`Incorrect browser ui state (${this.browserUiState.state})!`)
-        }
+    Then('browser ui state should be equal {string}', function(state) {
+        this.browserUiState.state.should.be.equal(state)
     })
 })

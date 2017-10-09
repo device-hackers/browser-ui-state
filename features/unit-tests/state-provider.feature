@@ -6,50 +6,50 @@ Feature: State Provider
       And screen dimensions is <screen-w-l> x <screen-h-l>
       And window dimensions is <win-w-init-l> x <win-h-init-l>
 
-    Then stateProvider.screenAspectRatio should be <screen-h-l>/<screen-w-l>
-      And stateProvider.viewportAspectRatio should be <win-w-init-l>/<win-h-init-l>
-      And orientation should be "LANDSCAPE"
-      And delta should be |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
-      And deviation should be stateProvider.delta / stateProvider.screenAspectRatio times 100
-      And stateProvider.collapsedThreshold should be <th-l-col>
-      And stateProvider.keyboardThreshold should be <th-l-key>
-      And stateProvider.state should be "COLLAPSED"
+    Then stateProvider.screenAspectRatio should be equal <screen-h-l>/<screen-w-l>
+      And stateProvider.viewportAspectRatio should be equal <win-w-init-l>/<win-h-init-l>
+      And orientation should be equal "LANDSCAPE"
+      And delta should be equal |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
+      And deviation should be equal stateProvider.delta / stateProvider.screenAspectRatio times 100
+      And stateProvider.collapsedThreshold should be equal <th-l-col>
+      And stateProvider.keyboardThreshold should be equal <th-l-key>
+      And stateProvider.state should be equal "COLLAPSED"
       And stateProvider.viewportWidthAdjustedIfNeeded should be correct
       And stateProvider.isIphoneX should correspond to "<device>"
 
     When after swipe up window dimensions changes to <win-w-swiped-l> x <win-h-swiped-l>
 
-    Then stateProvider.screenAspectRatio should be <screen-h-l>/<screen-w-l>
-      And stateProvider.viewportAspectRatio should be <win-w-swiped-l>/<win-h-swiped-l>
-      And orientation should be "LANDSCAPE"
-      And delta should be |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
-      And deviation should be stateProvider.delta / stateProvider.screenAspectRatio times 100
-      And stateProvider.state should be "EXPANDED"
+    Then stateProvider.screenAspectRatio should be equal <screen-h-l>/<screen-w-l>
+      And stateProvider.viewportAspectRatio should be equal <win-w-swiped-l>/<win-h-swiped-l>
+      And orientation should be equal "LANDSCAPE"
+      And delta should be equal |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
+      And deviation should be equal stateProvider.delta / stateProvider.screenAspectRatio times 100
+      And stateProvider.state should be equal "EXPANDED"
 
 
     When browser is rotated to portrait
       And screen dimensions changes to <screen-w-p> x <screen-h-p>
       And window dimensions changes to <win-w-init-p> x <win-h-init-p>
 
-    Then stateProvider.screenAspectRatio should be <screen-h-p>/<screen-w-p>
-      And stateProvider.viewportAspectRatio should be <win-h-init-p>/<win-w-init-p>
-      And orientation should be "PORTRAIT"
-      And delta should be |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
-      And deviation should be stateProvider.delta / stateProvider.screenAspectRatio times 100
-      And stateProvider.collapsedThreshold should be <th-p-col>
-      And stateProvider.keyboardThreshold should be <th-p-key>
-      And stateProvider.state should be "COLLAPSED"
+    Then stateProvider.screenAspectRatio should be equal <screen-h-p>/<screen-w-p>
+      And stateProvider.viewportAspectRatio should be equal <win-h-init-p>/<win-w-init-p>
+      And orientation should be equal "PORTRAIT"
+      And delta should be equal |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
+      And deviation should be equal stateProvider.delta / stateProvider.screenAspectRatio times 100
+      And stateProvider.collapsedThreshold should be equal <th-p-col>
+      And stateProvider.keyboardThreshold should be equal <th-p-key>
+      And stateProvider.state should be equal "COLLAPSED"
       And stateProvider.viewportWidthAdjustedIfNeeded should be correct
       And stateProvider.isIphoneX should correspond to "<device>"
 
     When after swipe up window dimensions changes to <win-w-swiped-p> x <win-h-swiped-p>
 
-    Then stateProvider.screenAspectRatio should be <screen-h-p>/<screen-w-p>
-      And stateProvider.viewportAspectRatio should be <win-h-swiped-p>/<win-w-swiped-p>
-      And orientation should be "PORTRAIT"
-      And delta should be |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
-      And deviation should be stateProvider.delta / stateProvider.screenAspectRatio times 100
-      And stateProvider.state should be "EXPANDED"
+    Then stateProvider.screenAspectRatio should be equal <screen-h-p>/<screen-w-p>
+      And stateProvider.viewportAspectRatio should be equal <win-h-swiped-p>/<win-w-swiped-p>
+      And orientation should be equal "PORTRAIT"
+      And delta should be equal |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|
+      And deviation should be equal stateProvider.delta / stateProvider.screenAspectRatio times 100
+      And stateProvider.state should be equal "EXPANDED"
 
 
   Examples:

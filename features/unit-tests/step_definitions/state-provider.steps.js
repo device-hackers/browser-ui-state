@@ -1,6 +1,7 @@
 import {defineSupportCode} from 'cucumber'
+import {should} from 'chai'; should();
 import StateProvider from '../../../src/browser-ui-state/state-providers/state-provider'
-import {Orientation} from "../../../src/browser-ui-state/device-detectors/device-orientation-detector";
+import {Orientation} from '../../../src/browser-ui-state/device-detectors/device-orientation-detector'
 
 defineSupportCode(function(context) {
     let Given = context.Given
@@ -12,79 +13,53 @@ defineSupportCode(function(context) {
         this.stateProvider = new StateProvider(this.win, this.thresholds)
     })
 
-    Then('stateProvider.screenAspectRatio should be {int}/{int}', function (width, height) {
-        let screenAspectRatio = width/height
-
-        if (this.stateProvider.screenAspectRatio !== screenAspectRatio) {
-            throw new Error(`Incorrect screenAspectRatio (${this.stateProvider.screenAspectRatio}), should be ${screenAspectRatio}!`)
-        }
+    Then('stateProvider.screenAspectRatio should be equal {int}/{int}', function (width, height) {
+        this.stateProvider.screenAspectRatio.should.be.equal(width/height)
     })
 
-    Then('stateProvider.viewportAspectRatio should be {int}/{int}', function (width, height) {
+    Then('stateProvider.viewportAspectRatio should be equal {int}/{int}', function (width, height) {
         let widthAdjusted = this.stateProvider.orientation === Orientation.LANDSCAPE &&
                                 this.stateProvider.isIphoneX() ? this.win.screen.height : width
-        let viewportAspectRatio = widthAdjusted/height
 
-        if (this.stateProvider.viewportAspectRatio !== viewportAspectRatio) {
-            throw new Error(`Incorrect viewportAspectRatio (${this.stateProvider.viewportAspectRatio}), should be ${viewportAspectRatio}!`)
-        }
+        this.stateProvider.viewportAspectRatio.should.be.equal(widthAdjusted/height)
     })
 
-    Then('orientation should be {string}', function (orientation) {
-        if (this.stateProvider.orientation !== orientation) {
-            throw new Error(`Incorrect orientation (${this.stateProvider.orientation})!`)
-        }
+    Then('orientation should be equal {string}', function (orientation) {
+        this.stateProvider.orientation.should.be.equal(orientation)
     })
 
-    Then('delta should be |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|', function () {
+    Then('delta should be equal |stateProvider.screenAspectRatio - stateProvider.viewportAspectRatio|', function () {
         let delta = Math.abs(this.stateProvider.screenAspectRatio - this.stateProvider.viewportAspectRatio)
-
-        if (this.stateProvider.delta !== delta) {
-            throw new Error(`Incorrect delta (${this.stateProvider.delta}), should be ${delta}!`)
-        }
+        this.stateProvider.delta.should.be.equal(delta)
     })
 
-    Then('deviation should be stateProvider.delta / stateProvider.screenAspectRatio times {int}', function (percent) {
+    Then('deviation should be equal stateProvider.delta / stateProvider.screenAspectRatio times {int}', function (percent) {
         let deviation = (this.stateProvider.delta / this.stateProvider.screenAspectRatio) * percent
-
-        if (this.stateProvider.deviation !== deviation) {
-            throw new Error(`Incorrect deviation (${this.stateProvider.deviation}), should be ${deviation}!`)
-        }
+        this.stateProvider.deviation.should.be.equal(deviation)
     })
 
-    Then('stateProvider.collapsedThreshold should be {float}', function (threshold) {
+    Then('stateProvider.collapsedThreshold should be equal {float}', function (threshold) {
         this.thresholds[this.stateProvider.orientation.toLowerCase()].collapsed = threshold
-
-        if (this.stateProvider.collapsedThreshold !== threshold) {
-            throw new Error(`Incorrect collapsedThreshold (${this.stateProvider.collapsedThreshold}), should be ${threshold}!`)
-        }
+        this.stateProvider.collapsedThreshold.should.be.equal(threshold)
     })
 
-    Then('stateProvider.keyboardThreshold should be {float}', function (threshold) {
+    Then('stateProvider.keyboardThreshold should be equal {float}', function (threshold) {
         this.thresholds[this.stateProvider.orientation.toLowerCase()].keyboard = threshold
-
-        if (this.stateProvider.keyboardThreshold !== threshold) {
-            throw new Error(`Incorrect keyboardThreshold (${this.stateProvider.keyboardThreshold}), should be ${threshold}!`)
-        }
+        this.stateProvider.keyboardThreshold.should.be.equal(threshold)
     })
 
-    Then('stateProvider.state should be {string}', function (state) {
-        if (this.stateProvider.state !== state) {
-            throw new Error(`Incorrect state (${this.stateProvider.state}), should be ${state}!`)
-        }
+    Then('stateProvider.state should be equal {string}', function (state) {
+        this.stateProvider.state.should.be.equal(state)
     })
 
     Then('stateProvider.viewportWidthAdjustedIfNeeded should be correct', function () {
         let width = this.stateProvider.isIphoneX() ? this.win.screen.height : this.win.innerWidth
-
-        if (this.stateProvider.viewportWidthAdjustedIfNeeded !== width) {
-            throw new Error(`Incorrect viewportWidthAdjustedIfNeeded (${this.stateProvider.viewportWidthAdjustedIfNeeded}), should be ${width}!`)
-        }
+        this.stateProvider.viewportWidthAdjustedIfNeeded.should.be.equal(width)
     })
 
     Then('stateProvider.isIphoneX should correspond to {string}', function (device) {
-        if (device === 'iPhone X' && !this.stateProvider.isIphoneX()) {
-            throw new Error(`Incorrect isIphoneX() (${this.stateProvider.isIphoneX()}), should be true!`)
+        if (device === 'iPhone X') {
+            this.stateProvider.isIphoneX().should.be.true
         }
     })
 })

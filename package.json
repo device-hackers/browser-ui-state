@@ -21,6 +21,7 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "chai": "^4.1.2",
     "fscreen": "^1.0.1"
   }
 }
