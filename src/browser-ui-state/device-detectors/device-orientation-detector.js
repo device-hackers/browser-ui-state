@@ -36,14 +36,14 @@ export default class DeviceOrientationDetector {
             return Orientation.LANDSCAPE
         } else if (width <= height && !keyboardShown) {
             return Orientation.PORTRAIT
-        } else if (width > height && keyboardShown && this._isViewportTooSquare()) {
+        } else if (width > height && keyboardShown && this._isViewportTooSquare(width, height)) {
             return Orientation.PORTRAIT
         } else {
             return Orientation.LANDSCAPE
         }
     }
 
-    _isViewportTooSquare() {
+    _isViewportTooSquare(width, height) {
         let viewportAspectRatio = Math.max(width, height) / Math.min(width, height)
         return viewportAspectRatio <= this._tooSquareViewportThreshold
     }
