@@ -19,12 +19,12 @@ export default class SamsungBrowserStateProvider extends StateProvider {
         switch (deviceDetector.device) {
             case Devices.SAMSUNG_GALAXY_NOTE_EDGE : thresholds = {
                 landscape : {
-                    collapsed: 12.4,
-                    keyboard: 38.0,
+                    collapsed: 21.9,
+                    keyboard: 49.4,
                 },
                 portrait : {
-                    collapsed: 13.7,
-                    keyboard: 30.7
+                    collapsed: 67.2,
+                    keyboard: 81.9
                 }
             }; break
         }
