@@ -27,7 +27,7 @@ export default class DeviceOrientationDetector {
 
         const orientationChangeHandler = () => {
             this._toggleOrientation()
-            alert(this._previousOrientation)
+            //alert(this._previousOrientation)
         }
 
         this._win.addEventListener('orientationchange', orientationChangeHandler)
