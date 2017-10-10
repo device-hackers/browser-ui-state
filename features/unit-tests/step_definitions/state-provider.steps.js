@@ -11,6 +11,7 @@ defineSupportCode(function(context) {
     Given('testing state provider with a user agent equals to {string}', function(userAgent) {
         this.win.navigator.userAgent = userAgent
         this.stateProvider = new StateProvider(this.win, this.thresholds, Orientation.LANDSCAPE)
+        this.win.orientation = 90
     })
 
     Then('stateProvider.screenAspectRatio should be equal {int}/{int}', function (width, height) {
@@ -19,7 +20,7 @@ defineSupportCode(function(context) {
 
     Then('stateProvider.viewportAspectRatio should be equal {int}/{int}', function (width, height) {
         let widthAdjusted = this.stateProvider.orientation === Orientation.LANDSCAPE &&
-                                this.stateProvider.isIphoneX() ? this.win.screen.height : width
+                                this.stateProvider._isIphoneX() ? this.win.screen.height : width
 
         this.stateProvider.viewportAspectRatio.should.be.equal(widthAdjusted/height)
     })
@@ -52,14 +53,14 @@ defineSupportCode(function(context) {
         this.stateProvider.state.should.be.equal(state)
     })
 
-    Then('stateProvider.viewportWidthAdjustedIfNeeded should be correct', function () {
-        let width = this.stateProvider.isIphoneX() ? this.win.screen.height : this.win.innerWidth
-        this.stateProvider.viewportWidthAdjustedIfNeeded.should.be.equal(width)
+    Then('stateProvider._viewportWidthAdjustedIfNeeded should be correct', function () {
+        let width = this.stateProvider._isIphoneX() ? this.win.screen.height : this.win.innerWidth
+        this.stateProvider._viewportWidthAdjustedIfNeeded.should.be.equal(width)
     })
 
-    Then('stateProvider.isIphoneX should correspond to {string}', function (device) {
+    Then('stateProvider._isIphoneX should correspond to {string}', function (device) {
         if (device === 'iPhone X') {
-            this.stateProvider.isIphoneX().should.be.true
+            this.stateProvider._isIphoneX().should.be.true
         }
     })
 })

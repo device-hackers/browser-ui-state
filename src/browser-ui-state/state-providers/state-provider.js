@@ -24,7 +24,8 @@ export default class StateProvider {
     get viewportAspectRatio() {
         const currentOrientation = this._deviceOrientationDetector.orientation
         let {innerWidth : viewportWidth, innerHeight : viewportHeight} = this._win
-        const viewportWiderSize = currentOrientation === Orientation.LANDSCAPE ? this.viewportWidthAdjustedIfNeeded : viewportHeight
+        const viewportWiderSize = currentOrientation === Orientation.LANDSCAPE ?
+                                                            this._viewportWidthAdjustedIfNeeded : viewportHeight
         const viewportNarrowerSize = currentOrientation === Orientation.PORTRAIT ? viewportWidth : viewportHeight
 
         return viewportWiderSize / viewportNarrowerSize
@@ -50,11 +51,16 @@ export default class StateProvider {
 
     get state() {
         const deviation = this.deviation
+        const isSplitMode = this._deviceOrientationDetector._isSplitMode()
 
         let state = States.EXPANDED
 
-        if (fscreen.fullscreenElement) {
-            state = States.HTML5_FULLSCREEN //Case with keyboard in HTML5 fullscreen mode can't be traced correctly
+        if (fscreen.fullscreenElement && isSplitMode) {
+            state = States.HTML5_FULLSCREEN_IN_SPLIT_MODE //Case with keyboard in HTML5 fullscreen mode can't be traced correctly
+        } else if (isSplitMode) {
+            state = States.SPLIT_MODE
+        } else if (fscreen.fullscreenElement) {
+            state = States.HTML5_FULLSCREEN
         } else if (deviation > this.keyboardThreshold) {
             state = States.KEYBOARD
         } else if (deviation > this.collapsedThreshold) {
@@ -71,11 +77,11 @@ export default class StateProvider {
      * always the largest side of the screen).
      * Relevant only for landscape
      */
-    get viewportWidthAdjustedIfNeeded() {
-        return this.isIphoneX() ? this._win.screen.height : this._win.innerWidth
+    get _viewportWidthAdjustedIfNeeded() {
+        return this._isIphoneX() ? this._win.screen.height : this._win.innerWidth
     }
 
-    isIphoneX() {
+    _isIphoneX() {
         return /\WiPhone\W/i.test(this._win.navigator.userAgent) && this._win.screen.height === 812
     }
 }

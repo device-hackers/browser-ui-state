@@ -22,8 +22,8 @@ const UserAgentsRegExp = {
     CHROME_IOS: /\W(?:iPhone|iPod|iPad)\W.*\W(?:Chrome|CriOS|CrMo)\W/i,
     SAFARI_IPHONE: /\W(?:iPhone|iPod)\W.*\WVersion\/(?!.*\WMQQBrowser\W)/i,
     SAFARI_IPAD: /\WiPad\W.*\WVersion\//i,
-    UC_BROWSER_EN_ANDROID: /\WAndroid\W.*(?!\Wzh-CN\W).*\WUCBrowser\W/i,
-    UC_BROWSER_CN_ANDROID: /\WAndroid\W.*\Wzh-CN\W.*\WUCBrowser\W/i, //TODO check why it doesn't detects as CN but EN on Pixel
+    UC_BROWSER_EN_ANDROID: /\WAndroid\W(?!.*\Wzh-CN\W).*\WUCBrowser\W/i,
+    UC_BROWSER_CN_ANDROID: /\WAndroid\W.*\Wzh-CN\W.*\WUCBrowser\W/i,
     UC_BROWSER_IOS: /\W(?:iPhone|iPod|iPad)\W.*\WUCBrowser\/[0-9]{2}/i,
     UC_BROWSER_EN_IOS_STATIC: /\W(?:iPhone|iPod|iPad)\W.*\Wen-.*\WUCBrowser\/[0-9]\./i, //on iPhone 4S, UC EN 9.3 is static (well with manual refreshes it is not)
     DU_BROWSER: /\Wbdbrowser\W/i,

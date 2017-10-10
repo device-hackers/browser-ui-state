@@ -17,6 +17,7 @@ defineSupportCode(function(context) {
             width: 0,
             height: 0
         },
+        orientation: 90,
         navigator: {
             userAgent: '',
             standalone: false
@@ -59,6 +60,7 @@ defineSupportCode(function(context) {
     Given('a user agent equals to {string}', function(userAgent) {
         this.win.navigator.userAgent = userAgent
         this.browserUiState = new BrowserUiState(this.win, Orientation.LANDSCAPE)
+        this.win.orientation = 90
     })
 
     Given('screen dimensions is {int} x {int}', function(width, height) {
@@ -76,6 +78,7 @@ defineSupportCode(function(context) {
     When('browser is rotated to portrait', function() {
         let stateProvider = this.stateProvider ? this.stateProvider : this.browserUiState._provider
         stateProvider._deviceOrientationDetector._toggleCurrentOrientation()
+        this.win.orientation = 0
     })
 
     When('screen dimensions changes to {int} x {int}', function(width, height) {

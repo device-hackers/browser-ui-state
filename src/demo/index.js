@@ -5,7 +5,8 @@ import {Orientation} from "../browser-ui-state/device-detectors/device-orientati
 
 class BrowserUiStateDemo {
     constructor() {
-        let initialOrientation = window.innerWidth > window.innerHeight ? Orientation.LANDSCAPE : Orientation.PORTRAIT
+        let initialOrientation = window.innerWidth > window.innerHeight ?
+            Orientation.LANDSCAPE : Orientation.PORTRAIT
 
         this.browserUiState = new BrowserUiState(window, initialOrientation)
 

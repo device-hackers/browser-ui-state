@@ -5,6 +5,8 @@ export const Orientation = {
     PORTRAIT:  'PORTRAIT'
 }
 
+const splitModeThreshold = 200
+
 export default class DeviceOrientationDetector {
     constructor(win, initialOrientation) {
         this._win = win
@@ -41,10 +43,30 @@ export default class DeviceOrientationDetector {
     }
 
     _getOrientationLegacy(width, height) {
-        if (this._initialOrientation) {
+        if (/\W(?:iPhone|iPod|iPad)\W/i.test(this._win.navigator.userAgent)) {
+            return Math.abs(this._win.orientation) === 90 ? Orientation.LANDSCAPE : Orientation.PORTRAIT
+        } else if (this._initialOrientation) {
             return this._currentOrientation
         } else {
             return width > height ? Orientation.LANDSCAPE : Orientation.PORTRAIT
+        }
+    }
+
+    _isSplitMode() {
+        if (/\WiPad\W/i.test(this._win.navigator.userAgent)) {
+            if (this.orientation === Orientation.LANDSCAPE) {
+                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+            } else {
+                return Math.min(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+            }
+        } else {
+            if (this.orientation === Orientation.LANDSCAPE) {
+                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+            } else if (!this._keyboardNoResizeDetector.keyboardShown) {
+                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerHeight > splitModeThreshold
+            } else {
+                return false
+            }
         }
     }
 }
