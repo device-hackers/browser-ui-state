@@ -10,6 +10,27 @@ export default class DeviceOrientationDetector {
         this._win = win
         this._keyboardNoResizeDetector = new KeyboardNoResizeDetector(win)
         this._tooSquareViewportThreshold = 1.55;
+
+
+        //TODO track initial orientation via width/height and then add orientation change handler and just toggle changes
+
+        this._initialOrientation = this._win.innerWidth > this._win.innerHeight ?
+            Orientation.LANDSCAPE : Orientation.PORTRAIT
+        this._previousOrientation = this._initialOrientation
+
+        //console.log(this._initialOrientation)
+
+        this._toggleOrientation = () => {
+            this._previousOrientation = this._previousOrientation === Orientation.LANDSCAPE ?
+                Orientation.PORTRAIT : Orientation.LANDSCAPE
+        }
+
+        const orientationChangeHandler = () => {
+            this._toggleOrientation()
+            alert(this._previousOrientation)
+        }
+
+        this._win.addEventListener('orientationchange', orientationChangeHandler)
     }
 
     get orientation() {
@@ -18,8 +39,8 @@ export default class DeviceOrientationDetector {
         if (orientationType) {
             return this._getOrientationModern(orientationType)
         } else {
-            return this._getOrientationLegacy(this._win.innerWidth, this._win.innerHeight,
-                this._keyboardNoResizeDetector.keyboardShown)
+            return this._previousOrientation
+            //return this._getOrientationLegacy(this._win.innerWidth, this._win.innerHeight, this._keyboardNoResizeDetector.keyboardShown)
         }
     }
 
