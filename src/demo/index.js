@@ -1,10 +1,13 @@
 import fscreen from 'fscreen'
 import BrowserUiState from '../browser-ui-state'
 import {version} from '../../package.json'
+import {Orientation} from "../browser-ui-state/device-detectors/device-orientation-detector";
 
 class BrowserUiStateDemo {
     constructor() {
-        this.browserUiState = new BrowserUiState()
+        let initialOrientation = window.innerWidth > window.innerHeight ? Orientation.LANDSCAPE : Orientation.PORTRAIT
+
+        this.browserUiState = new BrowserUiState(window, initialOrientation)
 
         window.addEventListener('load', () => {
             this.updateUi()

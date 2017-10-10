@@ -1,7 +1,7 @@
 import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 
 export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         let thresholds = {
             landscape : {
                 collapsed: 8.45,
@@ -30,7 +30,7 @@ export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvid
             return win.screen.height === 480
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
         this._device = `isIphone4=${isIphone4()}`
     }
 }

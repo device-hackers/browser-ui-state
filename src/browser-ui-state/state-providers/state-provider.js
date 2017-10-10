@@ -3,10 +3,10 @@ import States from './states'
 import DeviceOrientationDetector, {Orientation} from '../device-detectors/device-orientation-detector'
 
 export default class StateProvider {
-    constructor(win, thresholds) {
+    constructor(win, thresholds, initialOrientation) {
         this._win = win
         this._thresholds = thresholds
-        this._deviceOrientationDetector = new DeviceOrientationDetector(win)
+        this._deviceOrientationDetector = new DeviceOrientationDetector(win, initialOrientation)
     }
 
     get orientation() {

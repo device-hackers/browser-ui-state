@@ -6,7 +6,7 @@ import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
  * manage this case. Let's assume more and more users will gradually upgrade to iOS 10+.
  */
 export default class ChromeIosStateProvider extends KeyboardNoResizeStateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         const thresholds = {
             landscape : {
                 collapsed: 9.75,
@@ -18,6 +18,6 @@ export default class ChromeIosStateProvider extends KeyboardNoResizeStateProvide
             }
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
     }
 }

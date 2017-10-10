@@ -14,46 +14,46 @@ import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-st
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 
 class BrowserUiState {
-    constructor(win = window) {
+    constructor(win = window, initialOrientation = null) {
         this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
 
         switch (this._userAgentDetector.userAgent) {
             case UserAgents.CHROME_ANDROID :
-                this._provider = new ChromeAndroidStateProvider(win); break
+                this._provider = new ChromeAndroidStateProvider(win, initialOrientation); break
             case UserAgents.CHROME_IOS :
-                this._provider = new ChromeIosStateProvider(win); break
+                this._provider = new ChromeIosStateProvider(win, initialOrientation); break
             case UserAgents.SAFARI_IPHONE :
-                this._provider = new SafariIphoneStateProvider(win); break
+                this._provider = new SafariIphoneStateProvider(win, initialOrientation); break
             case UserAgents.SAFARI_IPAD :
-                this._provider = new SafariIpadStateProvider(win); break
+                this._provider = new SafariIpadStateProvider(win, initialOrientation); break
             case UserAgents.SAMSUNG_BROWSER :
-                this._provider = new SamsungBrowserStateProvider(win); break
+                this._provider = new SamsungBrowserStateProvider(win, initialOrientation); break
             case UserAgents.UC_BROWSER_EN_ANDROID :
-                this._provider = new UcbrowserEnAndroidStateProvider(win); break
+                this._provider = new UcbrowserEnAndroidStateProvider(win, initialOrientation); break
             case UserAgents.UC_BROWSER_CN_ANDROID :
-                this._provider = new UcbrowserCnAndroidStateProvider(win); break
+                this._provider = new UcbrowserCnAndroidStateProvider(win, initialOrientation); break
             case UserAgents.UC_BROWSER_IOS :
-                this._provider = new UcbrowserIosStateProvider(win); break
+                this._provider = new UcbrowserIosStateProvider(win, initialOrientation); break
             case UserAgents.OPERA_MINI_IPHONE :
-                this._provider = new OperaMiniIphoneStateProvider(win); break
+                this._provider = new OperaMiniIphoneStateProvider(win, initialOrientation); break
             case UserAgents.QQ_CN_IPHONE :
-                this._provider = new QqCnIphoneStateProvider(win); break
+                this._provider = new QqCnIphoneStateProvider(win, initialOrientation); break
             case UserAgents.DU_BROWSER :
             case UserAgents.UC_BROWSER_EN_IOS_STATIC :
             case UserAgents.OPERA_MINI_IPHONE_STATIC :
             case UserAgents.OPERA_MINI_IPAD :
-                this._provider = new StaticStateProvider(win); break
+                this._provider = new StaticStateProvider(win, initialOrientation); break
             case UserAgents.DESKTOP :
-                this._provider = new DesktopStateProvider(win); break
+                this._provider = new DesktopStateProvider(win, initialOrientation); break
             default :
-                this._provider = new UnknownStateProvider(win)
+                this._provider = new UnknownStateProvider(win, initialOrientation)
         }
 
         //Thanx Opera Mini iOS for this :( It has completely the same user-agent as Safari on homescreen/standalone
         if (win.navigator.standalone && /\WiPhone\W/i.test(win.navigator.userAgent)) {
-            this._provider = new SafariIphoneStateProvider(win)
+            this._provider = new SafariIphoneStateProvider(win, initialOrientation)
         } else if (win.navigator.standalone && /\WiPad\W/i.test(win.navigator.userAgent)) {
-            this._provider = new SafariIpadStateProvider(win)
+            this._provider = new SafariIpadStateProvider(win, initialOrientation)
         }
     }
 

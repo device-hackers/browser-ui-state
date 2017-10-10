@@ -2,7 +2,7 @@ import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 import States from './states'
 
 export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         const thresholds = {
             landscape : {
                 collapsed: 5.9,
@@ -14,7 +14,7 @@ export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProv
             }
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
     }
 
     get state() {

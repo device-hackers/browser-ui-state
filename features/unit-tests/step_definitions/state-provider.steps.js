@@ -10,7 +10,7 @@ defineSupportCode(function(context) {
 
     Given('testing state provider with a user agent equals to {string}', function(userAgent) {
         this.win.navigator.userAgent = userAgent
-        this.stateProvider = new StateProvider(this.win, this.thresholds)
+        this.stateProvider = new StateProvider(this.win, this.thresholds, Orientation.LANDSCAPE)
     })
 
     Then('stateProvider.screenAspectRatio should be equal {int}/{int}', function (width, height) {

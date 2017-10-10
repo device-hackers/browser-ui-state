@@ -1,7 +1,7 @@
 import StateProvider from './state-provider'
 
 export default class OperaMiniIphoneStateProvider extends StateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         const thresholds = {
             landscape : {
                 collapsed: 10.7,
@@ -13,6 +13,6 @@ export default class OperaMiniIphoneStateProvider extends StateProvider {
             }
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
     }
 }

@@ -3,7 +3,7 @@ import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 import States from './states'
 
 export default class StaticStateProvider extends KeyboardNoResizeStateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         const thresholds = {
             landscape : {
                 collapsed: null,
@@ -14,7 +14,7 @@ export default class StaticStateProvider extends KeyboardNoResizeStateProvider {
                 keyboard: null
             }
         }
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
     }
 
     get state() {

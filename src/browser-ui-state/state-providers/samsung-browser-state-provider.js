@@ -2,7 +2,7 @@ import StateProvider from './state-provider'
 import DeviceDetector, {Devices} from '../device-detectors/device-detector'
 
 export default class SamsungBrowserStateProvider extends StateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         let thresholds = {
             landscape : {
                 collapsed: 19.2,
@@ -29,7 +29,7 @@ export default class SamsungBrowserStateProvider extends StateProvider {
             }; break
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
         this._device = deviceDetector.device
     }
 }

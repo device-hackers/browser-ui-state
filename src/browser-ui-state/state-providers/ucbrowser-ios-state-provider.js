@@ -8,7 +8,7 @@ import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
  * - UC CN fullscreen   : keyboard resizes viewport
  */
 export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         let thresholds = {
             landscape : {
                 collapsed: 37.05,
@@ -38,7 +38,7 @@ export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProv
                 win.screen.height === 480
         }
 
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
         this._device = `isIphone4WithUcCN=${isIphone4WithUcCN()}`
     }
 }

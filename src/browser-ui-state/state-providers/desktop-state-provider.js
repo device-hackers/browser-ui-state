@@ -3,7 +3,7 @@ import StateProvider from './state-provider'
 import States from './states'
 
 export default class DesktopStateProvider extends StateProvider {
-    constructor(win) {
+    constructor(win, initialOrientation) {
         const thresholds = {
             landscape : {
                 collapsed: null,
@@ -14,7 +14,7 @@ export default class DesktopStateProvider extends StateProvider {
                 keyboard: null
             }
         }
-        super(win, thresholds)
+        super(win, thresholds, initialOrientation)
     }
 
     get state() {

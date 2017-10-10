@@ -1,6 +1,7 @@
 import {defineSupportCode} from 'cucumber'
 import {should} from 'chai'; should();
 import BrowserUiState from '../../../src/browser-ui-state/index'
+import {Orientation} from '../../../src/browser-ui-state/device-detectors/device-orientation-detector'
 
 defineSupportCode(function(context) {
     let Given = context.Given
@@ -25,6 +26,7 @@ defineSupportCode(function(context) {
                 addEventListener(type, listener, useCapture) { /*NOOP*/ }
             }
         },
+        addEventListener(type, listener, useCapture) { /*NOOP*/ },
         dispatchEvent(event) { /*NOOP*/ }
     }
 
@@ -56,7 +58,7 @@ defineSupportCode(function(context) {
 
     Given('a user agent equals to {string}', function(userAgent) {
         this.win.navigator.userAgent = userAgent
-        this.browserUiState = new BrowserUiState(this.win)
+        this.browserUiState = new BrowserUiState(this.win, Orientation.LANDSCAPE)
     })
 
     Given('screen dimensions is {int} x {int}', function(width, height) {
@@ -71,7 +73,10 @@ defineSupportCode(function(context) {
         this.updateWindow(width, height)
     })
 
-    When('browser is rotated to portrait', function() { /*NOOP*/ })
+    When('browser is rotated to portrait', function() {
+        let stateProvider = this.stateProvider ? this.stateProvider : this.browserUiState._provider
+        stateProvider._deviceOrientationDetector._toggleCurrentOrientation()
+    })
 
     When('screen dimensions changes to {int} x {int}', function(width, height) {
         this.updateScreen(width, height)
