@@ -2,6 +2,7 @@ import {defineSupportCode} from 'cucumber'
 import {should} from 'chai'; should();
 import StateProvider from '../../../src/browser-ui-state/state-providers/state-provider'
 import {Orientation} from '../../../src/browser-ui-state/device-detectors/device-orientation-detector'
+import DeviceDetector from '../../../src/browser-ui-state/device-detectors/device-detector'
 
 defineSupportCode(function(context) {
     let Given = context.Given
@@ -20,7 +21,8 @@ defineSupportCode(function(context) {
 
     Then('stateProvider.viewportAspectRatio should be equal {int}/{int}', function (width, height) {
         let widthAdjusted = this.stateProvider.orientation === Orientation.LANDSCAPE &&
-                                this.stateProvider._isIphoneX() ? this.win.screen.height : width
+            DeviceDetector.isIphoneX(this.win.navigator.userAgent, this.win.screen.height) ?
+                this.win.screen.height : width
 
         this.stateProvider.viewportAspectRatio.should.be.equal(widthAdjusted/height)
     })
@@ -54,13 +56,15 @@ defineSupportCode(function(context) {
     })
 
     Then('stateProvider._viewportWidthAdjustedIfNeeded should be correct', function () {
-        let width = this.stateProvider._isIphoneX() ? this.win.screen.height : this.win.innerWidth
+        let width = DeviceDetector.isIphoneX(this.win.navigator.userAgent, this.win.screen.height) ?
+            this.win.screen.height : this.win.innerWidth
+
         this.stateProvider._viewportWidthAdjustedIfNeeded.should.be.equal(width)
     })
 
     Then('stateProvider._isIphoneX should correspond to {string}', function (device) {
         if (device === 'iPhone X') {
-            this.stateProvider._isIphoneX().should.be.true
+            DeviceDetector.isIphoneX(this.win.navigator.userAgent, this.win.screen.height).should.be.true
         }
     })
 })

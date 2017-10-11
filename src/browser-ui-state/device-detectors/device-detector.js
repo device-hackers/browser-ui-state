@@ -31,4 +31,28 @@ export default class DeviceDetector {
             }
         }
     }
+
+    static isIos(userAgent) {
+        return /\W(?:iPhone|iPod|iPad)\W/i.test(userAgent)
+    }
+
+    static isIpad(userAgent) {
+        return /\WiPad\W/i.test(userAgent)
+    }
+
+    static isIphone(userAgent) {
+        return /\WiPhone\W/i.test(userAgent)
+    }
+
+    static isIphoneX(userAgent, screenHeight) {
+        return DeviceDetector.isIphone(userAgent) && screenHeight === 812
+    }
+
+    static isIphone4(userAgent, screenHeight) {
+        return DeviceDetector.isIphone(userAgent) && screenHeight === 480
+    }
+
+    static isIphone4WithUcCn(userAgent, screenHeight) {
+        return /\WiPhone\W.*\Wzh-CN\W.*\WUCBrowser\W/i.test(userAgent) && screenHeight === 480
+    }
 }

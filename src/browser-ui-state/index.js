@@ -12,6 +12,7 @@ import UcbrowserIosStateProvider from './state-providers/ucbrowser-ios-state-pro
 import StaticStateProvider from './state-providers/static-state-provider'
 import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-state-provider'
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
+import DeviceDetector from './device-detectors/device-detector'
 
 class BrowserUiState {
     constructor(initialOrientation = null, win = window) {
@@ -50,9 +51,9 @@ class BrowserUiState {
         }
 
         //Thanx Opera Mini iOS for this :( It has completely the same user-agent as Safari on homescreen/standalone
-        if (win.navigator.standalone && /\WiPhone\W/i.test(win.navigator.userAgent)) {
+        if (win.navigator.standalone && DeviceDetector.isIphone(win.navigator.userAgent)) {
             this._provider = new SafariIphoneStateProvider(win, initialOrientation)
-        } else if (win.navigator.standalone && /\WiPad\W/i.test(win.navigator.userAgent)) {
+        } else if (win.navigator.standalone && DeviceDetector.isIpad(win.navigator.userAgent)) {
             this._provider = new SafariIpadStateProvider(win, initialOrientation)
         }
     }

@@ -1,4 +1,5 @@
 import KeyboardNoResizeDetector from './keyboard-no-resize-detector'
+import DeviceDetector from './device-detector'
 
 export const Orientation = {
     LANDSCAPE: 'LANDSCAPE',
@@ -43,7 +44,7 @@ export default class DeviceOrientationDetector {
     }
 
     _getOrientationLegacy(width, height) {
-        if (/\W(?:iPhone|iPod|iPad)\W/i.test(this._win.navigator.userAgent)) {
+        if (DeviceDetector.isIos(this._win.navigator.userAgent)) {
             return Math.abs(this._win.orientation) === 90 ? Orientation.LANDSCAPE : Orientation.PORTRAIT
         } else if (this._initialOrientation) {
             return this._currentOrientation
@@ -53,7 +54,7 @@ export default class DeviceOrientationDetector {
     }
 
     _isSplitMode() {
-        if (/\WiPad\W/i.test(this._win.navigator.userAgent)) {
+        if (DeviceDetector.isIpad(this._win.navigator.userAgent)) {
             if (this.orientation === Orientation.LANDSCAPE) {
                 return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
             } else {

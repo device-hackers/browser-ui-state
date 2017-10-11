@@ -1,6 +1,7 @@
 import fscreen from 'fscreen'
 import States from './states'
 import DeviceOrientationDetector, {Orientation} from '../device-detectors/device-orientation-detector'
+import DeviceDetector from '../device-detectors/device-detector'
 
 export default class StateProvider {
     constructor(win, thresholds, initialOrientation) {
@@ -78,10 +79,7 @@ export default class StateProvider {
      * Relevant only for landscape
      */
     get _viewportWidthAdjustedIfNeeded() {
-        return this._isIphoneX() ? this._win.screen.height : this._win.innerWidth
-    }
-
-    _isIphoneX() {
-        return /\WiPhone\W/i.test(this._win.navigator.userAgent) && this._win.screen.height === 812
+        return DeviceDetector.isIphoneX(this._win.navigator.userAgent, this._win.screen.height) ?
+            this._win.screen.height : this._win.innerWidth
     }
 }

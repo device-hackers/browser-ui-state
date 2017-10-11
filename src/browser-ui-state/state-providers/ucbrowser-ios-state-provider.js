@@ -1,4 +1,5 @@
 import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
+import DeviceDetector from '../device-detectors/device-detector'
 
 /**
  * The fact this class extends KeyboardNoResizeStateProvider is not 100% accurate due to:
@@ -20,7 +21,7 @@ export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProv
             }
         }
 
-        if (isIphone4WithUcCN()) {
+        if (DeviceDetector.isIphone4WithUcCn()) {
             thresholds = {
                 landscape : {
                     collapsed: 42.35,
@@ -33,12 +34,7 @@ export default class UcbrowserIosStateProvider extends KeyboardNoResizeStateProv
             }
         }
 
-        function isIphone4WithUcCN() {
-            return /\WiPhone\W.*\Wzh-CN\W.*\WUCBrowser\W/i.test(win.navigator.userAgent) &&
-                win.screen.height === 480
-        }
-
         super(win, thresholds, initialOrientation)
-        this._device = `isIphone4WithUcCN=${isIphone4WithUcCN()}`
+        this._device = `isIphone4WithUcCN=${DeviceDetector.isIphone4WithUcCn()}`
     }
 }

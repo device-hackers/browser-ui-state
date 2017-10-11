@@ -1,4 +1,5 @@
 import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
+import DeviceDetector from '../device-detectors/device-detector'
 
 export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win, initialOrientation) {
@@ -13,7 +14,7 @@ export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvid
             }
         }
 
-        if (isIphone4()) {
+        if (DeviceDetector.isIphone4()) {
             thresholds = {
                 landscape : {
                     collapsed: 9.65,
@@ -26,11 +27,7 @@ export default class QqCnIphoneStateProvider extends KeyboardNoResizeStateProvid
             }
         }
 
-        function isIphone4() {
-            return win.screen.height === 480
-        }
-
         super(win, thresholds, initialOrientation)
-        this._device = `isIphone4=${isIphone4()}`
+        this._device = `isIphone4=${DeviceDetector.isIphone4()}`
     }
 }
