@@ -59,7 +59,7 @@ defineSupportCode(function(context) {
 
     Given('a user agent equals to {string}', function(userAgent) {
         this.win.navigator.userAgent = userAgent
-        this.browserUiState = new BrowserUiState(this.win, Orientation.LANDSCAPE)
+        this.browserUiState = new BrowserUiState(Orientation.LANDSCAPE, this.win)
         this.win.orientation = 90
     })
 

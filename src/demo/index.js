@@ -8,7 +8,7 @@ class BrowserUiStateDemo {
         let initialOrientation = window.innerWidth > window.innerHeight ?
             Orientation.LANDSCAPE : Orientation.PORTRAIT
 
-        this.browserUiState = new BrowserUiState(window, initialOrientation)
+        this.browserUiState = new BrowserUiState(initialOrientation, window)
 
         window.addEventListener('load', () => {
             this.updateUi()

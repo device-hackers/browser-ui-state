@@ -14,7 +14,7 @@ import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-st
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 
 class BrowserUiState {
-    constructor(win = window, initialOrientation = null) {
+    constructor(initialOrientation = null, win = window) {
         this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
 
         switch (this._userAgentDetector.userAgent) {
