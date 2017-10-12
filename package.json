@@ -2,14 +2,27 @@
   "name": "browser-ui-state",
   "version": "1.0.0",
   "description": "Library which allows to determine current browser UI state (address bar visibility, on-screen keyboard, etc)",
-  "main": "index.js",
+  "main": "./dist/browser-ui-state.js",
+  "files": ["dist/browser-ui-state.js", "src"],
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p && npm run test",
-    "test": "./node_modules/.bin/cucumber.js --compiler js:babel-core/register"
+    "build": "webpack && npm run test",
+    "test": "./node_modules/.bin/cucumber.js --compiler js:babel-core/register",
+    "prepublish": "npm run build"
   },
-  "author": "TheBit",
-  "license": "ISC",
+  "author": "TheBit <thebit1984@gmail.com>",
+  "contributors": ["Volodymyr Vyshko <vovanok1992@gmail.com>"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/device-hackers/browser-ui-state.git"
+  },
+  "bugs": "https://github.com/device-hackers/browser-ui-state/issues",
+  "homepage": "https://github.com/device-hackers/browser-ui-state",
+  "keywords": [
+    "mobile",
+    "browser"
+  ],
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
