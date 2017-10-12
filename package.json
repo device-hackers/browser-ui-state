@@ -2,7 +2,7 @@
   "name": "browser-ui-state",
   "version": "1.0.1",
   "description": "Library which allows to determine current browser UI state (address bar visibility, on-screen keyboard, etc)",
-  "main": "./dist/browser-ui-state.js",
+  "main": "dist/browser-ui-state.js",
   "files": [
     "dist/browser-ui-state.js",
     "src"
@@ -11,7 +11,7 @@
     "start": "webpack-dev-server",
     "build": "webpack && npm run test",
     "test": "./node_modules/.bin/cucumber.js --compiler js:babel-core/register",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "author": "TheBit <thebit1984@gmail.com>",
   "contributors": [

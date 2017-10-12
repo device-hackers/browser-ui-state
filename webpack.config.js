@@ -1,6 +1,6 @@
 const path = require('path')
-/*const HtmlWebpackPlugin = require('html-webpack-plugin')*/
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+//const HtmlWebpackPlugin = require('html-webpack-plugin')
 //const webpack = require('webpack')
 
 module.exports = {
@@ -18,14 +18,21 @@ module.exports = {
         ]
     },
     plugins: [
-        //TBD:
-        /*new HtmlWebpackPlugin({
-            template: 'index.html'
-        })*/
         new CopyWebpackPlugin([
             { from: 'index.html' },
             { from: 'src/demo' }
         ], { ignore: ['*.js'] })
-        //new webpack.optimize.ModuleConcatenationPlugin()
-    ]
+        //TBD:
+        /*, new HtmlWebpackPlugin({
+            template: 'index.html'
+        })*/
+        //https://stackoverflow.com/questions/45384170/how-to-fix-modules-with-moduleconcatenation-bailout-module-is-not-an-ecmascrip
+        //, new webpack.optimize.ModuleConcatenationPlugin()
+    ]/*,
+    stats: {
+        // Examine all modules
+        maxModules: Infinity,
+        // Display bailout reasons
+        optimizationBailout: true
+    }*/
 }
