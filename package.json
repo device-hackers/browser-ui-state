@@ -1,9 +1,12 @@
 {
   "name": "browser-ui-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library which allows to determine current browser UI state (address bar visibility, on-screen keyboard, etc)",
   "main": "./dist/browser-ui-state.js",
-  "files": ["dist/browser-ui-state.js", "src"],
+  "files": [
+    "dist/browser-ui-state.js",
+    "src"
+  ],
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack && npm run test",
@@ -11,7 +14,9 @@
     "prepublish": "npm run build"
   },
   "author": "TheBit <thebit1984@gmail.com>",
-  "contributors": ["Volodymyr Vyshko <vovanok1992@gmail.com>"],
+  "contributors": [
+    "Volodymyr Vyshko <vovanok1992@gmail.com>"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
