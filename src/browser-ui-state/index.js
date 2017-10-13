@@ -1,3 +1,4 @@
+import fscreen from 'fscreen'
 import UserAgentDetector, {UserAgents} from './device-detectors/user-agent-detector'
 import ChromeAndroidStateProvider from './state-providers/chrome-android-state-provider'
 import ChromeIosStateProvider from './state-providers/chrome-ios-state-provider'
@@ -88,6 +89,10 @@ class BrowserUiState {
 
     get state() {
         return this._provider.state
+    }
+
+    get fscreen() {
+        return fscreen
     }
 }
 
