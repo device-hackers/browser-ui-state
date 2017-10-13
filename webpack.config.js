@@ -55,7 +55,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: 'index.html' },
             { from: 'src/demo' }
-        ], { ignore: ['*.js'] })
+        ])
         //TBD:
         /*, new HtmlWebpackPlugin({
             template: 'index.html'

@@ -16,6 +16,7 @@ class BrowserUiStateDemo {
 
             document.getElementById('refresh').addEventListener('click', event => this.updateUi())
             document.getElementById('refresh2').addEventListener('click', event => this.updateUi())
+            document.getElementById('toggleViewport').addEventListener('click', event => this.toggleViewport())
         })
 
         const resizeHandler = () => {
@@ -76,6 +77,32 @@ class BrowserUiStateDemo {
         write('collapsedThreshold', collapsedThreshold)
         write('keyboardThreshold', keyboardThreshold)
         write('state', state)
+    }
+
+    toggleViewport() {
+        if (!ScalingReport.scaleFactor()) {
+            ViewportManager.init() //init if not initialized
+        }
+
+        let viewport = document.getElementById('meta-viewport')
+
+        if (viewport.dataset.viewportType === 'modern') {
+            this.setViewportLegacy(ScalingReport.scaleFactor())
+            viewport.dataset.viewportType = 'legacy'
+        } else {
+            this.setViewportModern()
+            viewport.dataset.viewportType = 'modern'
+        }
+    }
+
+    setViewportLegacy(scaleFactor) {
+        document.getElementById('meta-viewport').setAttribute('content', `user-scalable=no, initial-scale=${scaleFactor}, ` +
+                                                `minimum-scale=${scaleFactor}, maximum-scale=${scaleFactor}`)
+    }
+
+    setViewportModern() {
+        document.getElementById('meta-viewport').setAttribute('content', `user-scalable=no, width=device-width, ` +
+                                                `initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0`)
     }
 }
 

@@ -7,12 +7,13 @@
 
     <title>Browser UI State demo</title>
 
-    <meta id='viewport' name='viewport'
+    <meta name='viewport' id='meta-viewport' data-viewport-type="modern"
           content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
 
     <link rel='stylesheet' href='styles/style.css' />
     <link rel='stylesheet' href='styles/mediatest.css'>
 
+    <script src='viewport.js'></script>
     <script src='demo.js'></script>
 </head>
 <body>
@@ -25,6 +26,7 @@
         <a href="https://github.com/device-hackers/browser-ui-state/">https://github.com/device-hackers/browser-ui-state/</a><br><br>
         <input placeholder='Tap me to show keyboard'>
         <button id="refresh">Refresh</button>
+        <button id="toggleViewport">Toggle viewport</button>
 
         <div class='browserReadings'>
             <h4>Browser readings:</h4>
