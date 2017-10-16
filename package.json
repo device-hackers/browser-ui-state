@@ -2,7 +2,8 @@
   "name": "browser-ui-state",
   "version": "1.1.4",
   "description": "Library which allows to determine current browser UI state (address bar visibility, on-screen keyboard, etc)",
-  "main": "src/browser-ui-state",
+  "main": "dist/browser-ui-state.js",
+  "module": "src/browser-ui-state",
   "files": [
     "dist/browser-ui-state.js",
     "src"
