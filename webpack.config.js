@@ -1,7 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 //const HtmlWebpackPlugin = require('html-webpack-plugin')
-//const webpack = require('webpack')
+const webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -19,12 +19,12 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, use: {
                 loader: 'babel-loader',
                 options: {
-                    //babelrc: false,
-                    presets: ['env'],
+                    babelrc: false,
+                    //presets: ['env'],
                     //below is everything from preset 'env' except module-transformations,
                     //so that ModuleConcatenationPlugin do its job
                     //and so Cucumber still has Babel transformations via .babelrc
-                    /*plugins: [
+                    plugins: [
                         'check-es2015-constants',
                         'syntax-trailing-function-commas',
                         'transform-async-to-generator',
@@ -48,7 +48,7 @@ module.exports = {
                         'transform-es2015-unicode-regex',
                         'transform-exponentiation-operator',
                         'transform-regenerator',
-                    ],*/
+                    ],
                 }
             } }
         ]
@@ -63,7 +63,7 @@ module.exports = {
             template: 'index.html'
         })*/
         //https://stackoverflow.com/questions/45384170/how-to-fix-modules-with-moduleconcatenation-bailout-module-is-not-an-ecmascrip
-        //, new webpack.optimize.ModuleConcatenationPlugin()
+        , new webpack.optimize.ModuleConcatenationPlugin()
     ],
     stats: {
         maxModules: Infinity,
