@@ -4,7 +4,8 @@
   "description": "Library which allows to determine current browser UI state (address bar visibility, on-screen keyboard, etc)",
   "main": "src/browser-ui-state",
   "files": [
-    "dist/browser-ui-state.js"
+    "dist/browser-ui-state.js",
+    "src"
   ],
   "scripts": {
     "start": "webpack-dev-server",
@@ -12,9 +13,9 @@
     "test": "./node_modules/.bin/cucumber.js --compiler js:babel-core/register",
     "prepare": "npm run build"
   },
-  "author": "TheBit <thebit1984@gmail.com>",
+  "author": "Andriy Halyasovskyy (https://github.com/TheBit)",
   "contributors": [
-    "Volodymyr Vyshko <vovanok1992@gmail.com>"
+    "Volodymyr Vyshko (https://github.com/vyshkov)"
   ],
   "license": "MIT",
   "repository": {

@@ -1,7 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 //const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
+//const webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -61,7 +61,7 @@ module.exports = {
             template: 'index.html'
         })*/
         //https://stackoverflow.com/questions/45384170/how-to-fix-modules-with-moduleconcatenation-bailout-module-is-not-an-ecmascrip
-        , new webpack.optimize.ModuleConcatenationPlugin()
+        //, new webpack.optimize.ModuleConcatenationPlugin()
     ],
     stats: {
         maxModules: Infinity,
