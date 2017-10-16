@@ -17,8 +17,8 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, use: {
                 loader: 'babel-loader',
                 options: {
-                    babelrc: false,
-                    //presets: ['env']
+                    //babelrc: false,
+                    presets: ['env'],
                     //below is everything from preset 'env' except module-transformations,
                     //so that ModuleConcatenationPlugin do its job
                     //and so Cucumber still has Babel transformations via .babelrc
