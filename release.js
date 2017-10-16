@@ -1,4 +1,4 @@
 module.exports = (markdown, metaData) => {
-    console.log(markdown)
+    console.log(markdown);
     return markdown
 }
