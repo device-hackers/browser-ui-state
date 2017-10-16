@@ -22,7 +22,7 @@ module.exports = {
                     //below is everything from preset 'env' except module-transformations,
                     //so that ModuleConcatenationPlugin do its job
                     //and so Cucumber still has Babel transformations via .babelrc
-                    plugins: [
+                    /*plugins: [
                         'check-es2015-constants',
                         'syntax-trailing-function-commas',
                         'transform-async-to-generator',
@@ -46,7 +46,7 @@ module.exports = {
                         'transform-es2015-unicode-regex',
                         'transform-exponentiation-operator',
                         'transform-regenerator',
-                    ],
+                    ],*/
                 }
             } }
         ]
