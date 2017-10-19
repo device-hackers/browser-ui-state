@@ -1,4 +1,3 @@
-/*
 import fscreen from 'fscreen'
 import UserAgentDetector, {UserAgents} from './device-detectors/user-agent-detector'
 import UcbrowserEnAndroidStateProvider from './state-providers/ucbrowser-en-android-state-provider'
@@ -15,12 +14,10 @@ import StaticStateProvider from './state-providers/static-state-provider'
 import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-state-provider'
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 import DeviceDetector from './device-detectors/device-detector'
-*/
 
 class BrowserUiState {
     constructor(initialOrientation = null, win = window) {
-        alert('browser-ui-state')
-        /*this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
+        this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
 
         switch (this._userAgentDetector.userAgent) {
             case UserAgents.CHROME_ANDROID :
@@ -59,7 +56,7 @@ class BrowserUiState {
             this._provider = new SafariIphoneStateProvider(win, initialOrientation)
         } else if (win.navigator.standalone && DeviceDetector.isIpad(win.navigator.userAgent)) {
             this._provider = new SafariIpadStateProvider(win, initialOrientation)
-        }*/
+        }
     }
 
     get orientation() {
