@@ -29,7 +29,7 @@ This very library does not provide (and does not intended to) any out-of-the-box
 
 ## Installation
 ```shell
-$ npm install --save ... //TBD
+$ npm install --save browser-ui-state
 ```
 Don't be afraid of caret (^) in your package.json for this dependency - [semver](http://semver.org/) will [be](https://adambard.com/blog/on-library-versioning/) used [correctly](https://bytearcher.com/articles/semver-explained-why-theres-a-caret-in-my-package-json/) for [sure](https://medium.com/front-end-developers/versioning-you-re-doing-it-wrong-5522bb46431) :hand::expressionless: :one:.:zero:.:zero:.
 
