@@ -15,6 +15,7 @@ import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-st
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 import DeviceDetector from './device-detectors/device-detector'
 
+//TODO hide internals in private scope using WeakMaps and expose just strings for debug widgets
 class BrowserUiState {
     constructor(initialOrientation = null, win = window) {
         this._userAgentDetector = new UserAgentDetector(win.navigator.userAgent)
