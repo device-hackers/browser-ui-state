@@ -2,8 +2,8 @@
 [![npm version](https://badge.fury.io/js/browser-ui-state.svg)](https://badge.fury.io/js/browser-ui-state) 
 ![single dependency](https://david-dm.org/TheBit/browser-ui-state.svg) 
 ![build](https://travis-ci.org/device-hackers/browser-ui-state.svg?branch=master)
-![normal size](http://img.badgesize.io/https://unpkg.com/browser-ui-state)
 ![gzipped size](http://img.badgesize.io/https://unpkg.com/browser-ui-state?compression=gzip)
+![normal size](http://img.badgesize.io/https://unpkg.com/browser-ui-state)
 
 [Live Demo](http://browser-ui-state.surge.sh/) - Open in Chrome, emulate to Nexus 5X and play with 
 different modes (look for state property with values e.g. EXPANDED, COLLAPSED, KEYBOARD, etc)
