@@ -58,6 +58,33 @@ window.addEventListener('orientationchange', resizeHandler)
 [states.js](https://github.com/TheBit/browser-ui-state/blob/master/src/browser-ui-state/state-providers/states.js) - 
 see all supported states
 
+Old school:
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="https://unpkg.com/browser-ui-state"></script>
+    <script>
+        var browserUiState = new BrowserUiState.default()
+        
+        function resizeHandler() {
+            console.log(browserUiState.orientation)
+            console.log(browserUiState.state) 
+        }
+        
+        window.addEventListener('load', resizeHandler)
+        window.addEventListener('resize', resizeHandler)
+        window.addEventListener('orientationchange', resizeHandler)
+    </script>
+</head>
+<body>
+</body>
+</html>
+```
+
 ### Detecting device orientation
 You might wonder why this library also reports orientation.
 
@@ -91,7 +118,9 @@ console.log(`${browserUiState.keyboardThreshold}%`)
 ```
 
 ## Dependencies
-Only one: [Fscreen](https://github.com/rafrex/fscreen)
+Only one: [Fscreen](https://github.com/rafrex/fscreen) - ~60 lines of 
+[code](https://github.com/rafrex/fscreen/blob/master/src/index.js) (used for vendor agnostic access to the 
+[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API))
 
 ## Matrix of supported devices and browsers
 See [Matrix](docs/MATRIX.md)
