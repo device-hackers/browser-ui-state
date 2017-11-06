@@ -13,6 +13,7 @@ export const UserAgents = {
     OPERA_MINI_IPHONE: 'OPERA_MINI_IPHONE',
     OPERA_MINI_IPHONE_STATIC: 'OPERA_MINI_IPHONE_STATIC',
     QQ_CN_IPHONE: 'QQ_CN_IPHONE',
+    ANDROID_STOCK: 'ANDROID_STOCK',
     DESKTOP: 'DESKTOP'
 }
 
@@ -31,6 +32,7 @@ const UserAgentsRegExp = {
     OPERA_MINI_IPHONE: /\WiPhone.OS.(?!10)[0-9]{2}(?!.*\WSafari\W)/i, //Aimed to match iOS 11+
     OPERA_MINI_IPHONE_STATIC: /\WiPhone.OS.(?:10|[0-9]{1}_)(?!.*\WSafari\W)/i, //Aimed to match iOS 0-10 inclusively
     QQ_CN_IPHONE: /\WiPhone\W.*\WMQQBrowser\W/i,
+    ANDROID_STOCK: /\WAndroid\W.*\W(?:Version|Browser)/i,
     DESKTOP: /(?:^|\W)(?:Mozilla|Opera)\W(?!.*\W(?:Android|iPhone|iPod|iPad)\W)/i
 }
 

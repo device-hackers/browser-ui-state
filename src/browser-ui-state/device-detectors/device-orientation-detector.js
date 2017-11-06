@@ -1,5 +1,6 @@
 import KeyboardNoResizeDetector from './keyboard-no-resize-detector'
 import DeviceDetector from './device-detector'
+import UserAgentDetector, {UserAgents} from './user-agent-detector'
 
 export const Orientation = {
     LANDSCAPE: 'LANDSCAPE',
@@ -54,17 +55,23 @@ export default class DeviceOrientationDetector {
     }
 
     _isSplitMode() {
-        if (DeviceDetector.isIpad(this._win.navigator.userAgent)) {
+        let userAgent = this._win.navigator.userAgent
+        if (new UserAgentDetector(userAgent).userAgent === UserAgents.ANDROID_STOCK) return false
+
+        let screenW = this._win.screen.width, screenH = this._win.screen.height
+        let windowW = this._win.innerWidth, windowH = this._win.innerHeight
+
+        if (DeviceDetector.isIpad(userAgent)) {
             if (this.orientation === Orientation.LANDSCAPE) {
-                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+                return Math.max(screenW, screenH) - windowW > splitModeThreshold
             } else {
-                return Math.min(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+                return Math.min(screenW, screenH) - windowW > splitModeThreshold
             }
         } else {
             if (this.orientation === Orientation.LANDSCAPE) {
-                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerWidth > splitModeThreshold
+                return Math.max(screenW, screenH) - windowW > splitModeThreshold
             } else if (!this._keyboardNoResizeDetector.keyboardShown) {
-                return Math.max(this._win.screen.width, this._win.screen.height) - this._win.innerHeight > splitModeThreshold
+                return Math.max(screenW, screenH) - windowH > splitModeThreshold
             } else {
                 return false
             }

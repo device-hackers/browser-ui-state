@@ -1,6 +1,15 @@
 import fscreen from 'fscreen'
 import BrowserUiState from '../browser-ui-state'
 import {version} from '../../package.json'
+import EventThrottle from './event-throttle'
+
+/**
+ * Some old bad user-agents doesn't fire resize when URL bar gets shown or hidden, that's why they need extra scroll
+ * handler
+ * @param userAgent - window.navigator.userAgent string
+ */
+const isUserAgentNotFiringResize = (userAgent) =>
+    /(?:Lenovo.A850.*\WVersion\/|Lenovo.A889.*\WBrowser\/|\WGT-P5100.*\WVersion\/)/i.test(userAgent)
 
 class BrowserUiStateDemo {
     constructor() {
@@ -10,6 +19,7 @@ class BrowserUiStateDemo {
 
         window.addEventListener('load', () => {
             this.updateUi()
+            this.safeRun(this.updateUi.bind(this))
 
             document.getElementById('html5FullscreenBtn').addEventListener('click', event => fscreen.fullscreenElement ?
                 fscreen.exitFullscreen() : fscreen.requestFullscreen(document.documentElement))
@@ -20,16 +30,25 @@ class BrowserUiStateDemo {
         })
 
         const resizeHandler = () => {
-            this.updateUi()
-            this.safeRun(this.updateUi.bind(this))
+            setTimeout(() => {
+                this.updateUi()
+                this.safeRun(this.updateUi.bind(this))
+            }, 100)
         }
 
-        window.addEventListener('resize', resizeHandler)
-        window.addEventListener('orientationchange', resizeHandler)
+        new EventThrottle('resize', 'optimizedResize', window)
+        new EventThrottle('orientationchange', 'optimizedOrientationchange', window)
+        window.addEventListener('optimizedResize', resizeHandler)
+        window.addEventListener('optimizedOrientationchange', resizeHandler)
+
+        if (isUserAgentNotFiringResize(window.navigator.userAgent)) {
+            new EventThrottle('scroll', 'optimizedScroll', window)
+            window.addEventListener('optimizedScroll', resizeHandler)
+        }
     }
 
     safeRun(func) {
-        setTimeout(func, 300)
+        setTimeout(func, 400)
     }
 
     write(elementId, text) {

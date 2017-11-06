@@ -14,6 +14,7 @@ import StaticStateProvider from './state-providers/static-state-provider'
 import OperaMiniIphoneStateProvider from './state-providers/opera-mini-iphone-state-provider'
 import QqCnIphoneStateProvider from './state-providers/qq-cn-iphone-state-provider'
 import DeviceDetector from './device-detectors/device-detector'
+import AndroidStockStateProvider from './state-providers/android-stock-state-provider'
 
 //TODO hide internals in private scope using WeakMaps and expose just strings for debug widgets
 class BrowserUiState {
@@ -41,6 +42,8 @@ class BrowserUiState {
                 this._provider = new OperaMiniIphoneStateProvider(win, initialOrientation); break
             case UserAgents.QQ_CN_IPHONE :
                 this._provider = new QqCnIphoneStateProvider(win, initialOrientation); break
+            case UserAgents.ANDROID_STOCK :
+                this._provider = new AndroidStockStateProvider(win, initialOrientation); break
             case UserAgents.DU_BROWSER :
             case UserAgents.UC_BROWSER_EN_IOS_STATIC :
             case UserAgents.OPERA_MINI_IPHONE_STATIC :
