@@ -40,6 +40,7 @@ export default class ChromeAndroidStateProvider extends StateProvider {
                     keyboard: 32.5
                 }
             }; break
+            case Devices.SAMSUNG_GALAXY_S7 :
             case Devices.SAMSUNG_GALAXY_S8 : thresholds = {
                 landscape : {
                     collapsed: 13.45,
