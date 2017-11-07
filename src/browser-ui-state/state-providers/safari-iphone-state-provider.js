@@ -1,5 +1,7 @@
 import KeyboardNoResizeStateProvider from './keyboard-no-resize-state-provider'
 import States from './states'
+import DeviceDetector from '../device-detectors/device-detector'
+import {Orientation} from '../device-detectors/device-orientation-detector'
 
 export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProvider {
     constructor(win, initialOrientation) {
@@ -20,8 +22,36 @@ export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProv
     get state() {
         if (this._win.navigator.standalone) {
             return States.SAFARI_HOMESCREEN
+        } else if (DeviceDetector.isIphoneX(this._win.navigator.userAgent, this._win.screen.height)) {
+            return this.stateForIphoneX
         } else {
             return super.state
         }
+    }
+
+    get stateForIphoneX() {
+        let orientation = this._deviceOrientationDetector.orientation
+        let deviation = this.deviation
+
+        if (this._deviceOrientationDetector._keyboardNoResizeDetector.keyboardShown) {
+            return States.KEYBOARD_NO_RESIZE
+        } else if (orientation === Orientation.LANDSCAPE &&
+            (this.isCloseToNumber(deviation, 2.9) || this.isCloseToNumber(deviation, 15.4))) {
+            return States.COLLAPSED
+        } else if (orientation === Orientation.PORTRAIT && this.isCloseToNumber(deviation, 21.8)) {
+            return States.COLLAPSED
+        } else {
+            return States.EXPANDED
+        }
+    }
+
+    /**
+     * @param inputNumber
+     * @param targetNumber
+     * @returns {boolean} true if inputNumber is within below threshold (0.5, adjust if needed) near targetNumber
+     */
+    isCloseToNumber(inputNumber, targetNumber) {
+        return inputNumber === targetNumber ||
+            (inputNumber - 0.5 < targetNumber && inputNumber + 0.5 > targetNumber)
     }
 }
