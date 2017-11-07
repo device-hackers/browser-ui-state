@@ -25,8 +25,7 @@ export default class StateProvider {
     get viewportAspectRatio() {
         const currentOrientation = this._deviceOrientationDetector.orientation
         let {innerWidth : viewportWidth, innerHeight : viewportHeight} = this._win
-        const viewportWiderSize = currentOrientation === Orientation.LANDSCAPE ?
-                                                            this._viewportWidthAdjustedIfNeeded : viewportHeight
+        const viewportWiderSize = currentOrientation === Orientation.LANDSCAPE ? viewportWidth : viewportHeight
         const viewportNarrowerSize = currentOrientation === Orientation.PORTRAIT ? viewportWidth : viewportHeight
 
         return viewportWiderSize / viewportNarrowerSize
