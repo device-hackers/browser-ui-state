@@ -7,7 +7,7 @@ export const Orientation = {
     PORTRAIT:  'PORTRAIT'
 }
 
-const splitModeThreshold = 200
+const splitModeThreshold = 350
 
 export default class DeviceOrientationDetector {
     constructor(win, initialOrientation) {
