@@ -48,10 +48,10 @@ export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProv
     /**
      * @param inputNumber
      * @param targetNumber
-     * @returns {boolean} true if inputNumber is within below threshold (0.5, adjust if needed) near targetNumber
+     * @returns {boolean} true if inputNumber is within below threshold (1.5, adjust if needed) near targetNumber
      */
     isCloseToNumber(inputNumber, targetNumber) {
         return inputNumber === targetNumber ||
-            (inputNumber - 0.5 < targetNumber && inputNumber + 0.5 > targetNumber)
+            (inputNumber - 1.5 < targetNumber && inputNumber + 1.5 > targetNumber)
     }
 }
