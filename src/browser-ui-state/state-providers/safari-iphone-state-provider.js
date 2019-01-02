@@ -36,7 +36,7 @@ export default class SafariIphoneStateProvider extends KeyboardNoResizeStateProv
         if (this._deviceOrientationDetector._keyboardNoResizeDetector.keyboardShown) {
             return States.KEYBOARD_NO_RESIZE
         } else if (orientation === Orientation.LANDSCAPE &&
-            (this.isCloseToNumber(deviation, 2.9) || this.isCloseToNumber(deviation, 15.4))) {
+            (this.isCloseToNumber(deviation, 2.9) || this.isCloseToNumber(deviation, 15.4) || this.isCloseToNumber(deviation, 28.4))) {
             return States.COLLAPSED
         } else if (orientation === Orientation.PORTRAIT && this.isCloseToNumber(deviation, 21.2)) {
             return States.COLLAPSED
